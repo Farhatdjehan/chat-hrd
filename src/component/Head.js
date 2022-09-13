@@ -8,7 +8,8 @@ export default function Header() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className='main-header'>
-                <div>
+                <div className='sidebar-button'>=</div>
+                <div className='header-title'>
                     Akhlaq Chat
                 </div>
             </div>
