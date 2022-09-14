@@ -1,0 +1,39 @@
+@import "./../../../../styles/variables";
+
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+.header {
+  padding: 16px;
+  flex-basis: 72px;
+  display: flex;
+  flex-shrink: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  align-items: center;
+  background-color: $blue-primary;
+  color: $white-primary;
+
+  /* MOBILE */
+  .mobile {
+    display: flex;
+    justify-content: space-between;
+
+    .logoWrapper {
+      height: 24px;
+      display: flex;
+    }
+    .titleApp {
+      margin-left: 8px;
+      font-weight: 600;
+    }
+
+    .hamburger {
+      height: 24px;
+      width: 24px;
+    }
+  }
+}
