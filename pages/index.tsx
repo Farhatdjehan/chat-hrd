@@ -31,26 +31,27 @@ export default function Home() {
     setData(newData);
   };
   return (
-    <DashboardLayout pageTitle="Home">
+    <>
       {!input && (
-        <div className="card-list__wrapper">
-          <Link href="/chat-hrd/input">
-            <a className="card-template">
-              <div className="card-illustration"></div>
-              <div className="card-text">Chat HRD</div>
-            </a>
-          </Link>
-          <Link href="#">
-            <a className="card-template">
-              <div className="card-text">Segera...</div>
-            </a>
-          </Link>
-        </div>
+        <DashboardLayout pageTitle="Home">
+          <div className="card-list__wrapper">
+            <Link href="/tema/input">
+              <a className="card-template">
+                <div className="card-illustration"></div>
+                <div className="card-text">Chat HRD</div>
+              </a>
+            </Link>
+            <Link href="#">
+              <a className="card-template">
+                <div className="card-text">Segera...</div>
+              </a>
+            </Link>
+          </div>
+        </DashboardLayout>
       )}
-
       {input && (
         <FormInput handleSubmit={handleSubmit} handleChange={handleChange} />
       )}
-    </DashboardLayout>
+    </>
   );
 }
