@@ -7,7 +7,7 @@ export default function Form() {
   const router = useRouter();
   const [data, setData]: any = useState();
   let idTemplate = Number(router?.query?.form);
-  
+
   useEffect(() => {
     if (getCookie("data") !== "") {
       let tmp = getCookie("data");
@@ -62,6 +62,13 @@ export default function Form() {
           className="data-input"
           id="experience"
           name="experience"
+          onChange={handleChange}
+        />
+        <div className="data-label">Sumber Lowongan</div>
+        <input
+          className="data-input"
+          id="source"
+          name="source"
           onChange={handleChange}
         />
         <button className="btn btn-100" type="submit">

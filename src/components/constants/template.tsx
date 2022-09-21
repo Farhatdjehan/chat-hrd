@@ -10,7 +10,7 @@ export const templateChat = [
   {
     id: 1,
     title: "Ngirim Email Lamaran ke HRD",
-    text: `Dengan hormat Bapak/Ibu HRD Perusahaan ${parsingData?.perusahaan}. <br/><br/>Perkenalkan saya ${parsingData?.nama}. Sehubungan dengan informasi lowongan kerja yang saya dapatkan melalui, dengan ini saya ingin melamar pekerjaan sebagai ${parsingData?.divisi} di ${parsingData?.perusahaan}.<br/><br/> Saya memiliki pengalaman pekerjaan sebagai ${parsingData?.divisi} selama ${parsingData?.experience} di perusahaan ${parsingData?.former_company}. Dengan pengalaman ini saya yakin skill dan pengalaman yang saya dapatkan dapat berkontribusi di ${parsingData?.perusahaan}.<br/><br/> Berikut saya lampirkan CV dan Portofolio saya sebagai bahan pertimbangan. Looking forward to hearing from you.<br/><br/>Best Regards<br/>${parsingData?.nama}<br/><br/>Kontak : ${parsingData?.telepon}`,
+    text: `Dengan hormat Bapak/Ibu HRD Perusahaan ${parsingData?.perusahaan}. <br/><br/>Perkenalkan saya ${parsingData?.nama}. Sehubungan dengan informasi lowongan kerja yang saya dapatkan melalui ${parsingData?.source}, dengan ini saya ingin melamar pekerjaan sebagai ${parsingData?.divisi} di ${parsingData?.perusahaan}.<br/><br/> Saya memiliki pengalaman pekerjaan sebagai ${parsingData?.divisi} selama ${parsingData?.experience} di perusahaan ${parsingData?.former_company}. Dengan pengalaman ini saya yakin skill dan pengalaman yang saya dapatkan dapat berkontribusi di ${parsingData?.perusahaan}.<br/><br/> Berikut saya lampirkan CV dan Portofolio saya sebagai bahan pertimbangan. Looking forward to hearing from you.<br/><br/>Best Regards<br/>${parsingData?.nama}<br/><br/>Kontak : ${parsingData?.telepon}`,
   },
   {
     id: 2,
