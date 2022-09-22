@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { getCookie, setCookie } from "../../src/components/common/utils";
 import DashboardLayout from "../../src/components/DashboardLayout";
+import styles from "./../../styles/pages/InputedTema.module.scss";
 
 export default function Form() {
   const router = useRouter();
@@ -24,6 +25,7 @@ export default function Form() {
   const handleSubmit = (e: any) => {
     e.preventDefault();
     setCookie("data", JSON.stringify(data), 14);
+
     router.push(`/result/${router?.query?.form}`);
   };
 
@@ -42,6 +44,7 @@ export default function Form() {
           id="perusahaan"
           name="perusahaan"
           onChange={handleChange}
+          placeholder="ex: PT. ABC"
         />
         <div className="data-label">Divisi Melamar</div>
         <input
@@ -49,12 +52,14 @@ export default function Form() {
           id="divisi"
           name="divisi"
           onChange={handleChange}
+          placeholder="ex: Social Media Specialis"
         />
         <div className="data-label">Perusahaan Sebelumnya</div>
         <input
           className="data-input"
           id="former_company"
           name="former_company"
+          placeholder="ex: PT. ABC"
           onChange={handleChange}
         />
         <div className="data-label">Pengalaman Bekerja</div>
@@ -63,6 +68,7 @@ export default function Form() {
           id="experience"
           name="experience"
           onChange={handleChange}
+          placeholder="ex: 1 Tahun"
         />
         <div className="data-label">Sumber Lowongan</div>
         <input
@@ -70,6 +76,7 @@ export default function Form() {
           id="source"
           name="source"
           onChange={handleChange}
+          placeholder="ex: Instagram"
         />
         <button className="btn btn-100" type="submit">
           Simpan
@@ -83,6 +90,7 @@ export default function Form() {
           id="perusahaan"
           name="perusahaan"
           onChange={handleChange}
+          placeholder="ex: PT. ABC"
         />
         <div className="data-label">Divisi Melamar</div>
         <input
@@ -90,6 +98,7 @@ export default function Form() {
           id="divisi"
           name="divisi"
           onChange={handleChange}
+          placeholder="ex: Kreatif"
         />
         <div className="data-label">Sumber Lowongan</div>
         <input
@@ -97,6 +106,7 @@ export default function Form() {
           id="source"
           name="source"
           onChange={handleChange}
+          placeholder="ex: Instagram"
         />
         <button className="btn btn-100" type="submit">
           Simpan
@@ -110,6 +120,7 @@ export default function Form() {
           id="nama_hrd"
           name="nama_hrd"
           onChange={handleChange}
+          placeholder="ex: Bapak/Ibu John Doe"
         />
         <div className="data-label">Nama Perusahaan</div>
         <input
@@ -117,6 +128,7 @@ export default function Form() {
           id="perusahaan"
           name="perusahaan"
           onChange={handleChange}
+          placeholder="ex: PT. ABC"
         />
         <div className="data-label">Divisi Melamar</div>
         <input
@@ -124,6 +136,7 @@ export default function Form() {
           id="divisi"
           name="divisi"
           onChange={handleChange}
+          placeholder="ex: Kreatif"
         />
         <div className="data-label">Tanggal Melamar</div>
         <input
@@ -131,6 +144,7 @@ export default function Form() {
           id="tanggal"
           name="tanggal"
           onChange={handleChange}
+          placeholder="ex: 1 Januari 1990"
         />
         <button className="btn btn-100" type="submit">
           Simpan
@@ -144,6 +158,7 @@ export default function Form() {
           id="nama_hrd"
           name="nama_hrd"
           onChange={handleChange}
+          placeholder="ex: Bapak/Ibu John Doe"
         />
         <div className="data-label">Nama Perusahaan</div>
         <input
@@ -151,6 +166,7 @@ export default function Form() {
           id="perusahaan"
           name="perusahaan"
           onChange={handleChange}
+          placeholder="ex: PT. ABC"
         />
         <div className="data-label">Divisi Melamar</div>
         <input
@@ -158,6 +174,7 @@ export default function Form() {
           id="divisi"
           name="divisi"
           onChange={handleChange}
+          placeholder="ex: Kreatif"
         />
         <button className="btn btn-100" type="submit">
           Simpan
@@ -169,7 +186,10 @@ export default function Form() {
   return (
     <DashboardLayout pageTitle="Input">
       <div className="main-padding">
-        <div className="title-type" onClick={handleBack}>{`< Chat HRD`}</div>
+        <div
+          className={styles.inputTema}
+          onClick={handleBack}
+        >{`< Kembali`}</div>
         <>{formInput(idTemplate)}</>
       </div>
     </DashboardLayout>

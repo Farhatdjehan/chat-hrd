@@ -58,6 +58,18 @@ export default function Sidebar(props: SidebarProps) {
                 <a></a>
               </Link>
             </MenuItem>
+            <MenuItem>
+              Bagikan Aplikasi
+              <Link href="#">
+                <a></a>
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              Nilai Aplikasi
+              <Link href="#">
+                <a></a>
+              </Link>
+            </MenuItem>
           </Menu>
         </SidebarContent>
       </ProSidebar>
