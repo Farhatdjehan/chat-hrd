@@ -1,7 +1,13 @@
 .inputTema {
-  font-size: 14px;
+  font-size: 12px;
   margin-bottom: 24px;
-  font-weight: 600;
+  font-weight: 500;
+  display: flex;
+  background: #1366f3;
+  padding: 8px 16px;
+  border-radius: 8px;
+  width: max-content;
+  color: white;
 }
 
 .templateMessages {
@@ -10,6 +16,26 @@
   border-radius: 16px;
   font-size: 14px;
   margin-bottom: 16px;
-  height: 80px;
+  height: 82px;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  .templateTop {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+}
+.templateIllustrator {
+  width: 50px;
+  height: 50px;
+  background: rgba(19, 102, 243, 0.231372549);
+  border-radius: 6px;
+  margin-right: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1366f3;
 }

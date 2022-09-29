@@ -36,7 +36,7 @@ export default function Sidebar(props: SidebarProps) {
       <ProSidebar breakPoint="xxl" toggled={toggle} onToggle={handleToggle}>
         <SidebarContent>
           <div className="header-sidebar">
-            <div>{data?.nama}</div>
+            <div className="header-information">{data?.nama}</div>
             <div>{data?.telepon}</div>
           </div>
           <Menu className={`menu`}>

@@ -14,14 +14,14 @@ export default function FormInput(props: FormProps) {
           </div>
           <div className="data-label">Nama Anda</div>
           <input
-            className="data-input"
+            className="data-input first"
             id="nama"
             name="nama"
             onChange={handleChange}
           />
           <div className="data-label">Umur Anda</div>
           <input
-            className="data-input"
+            className="data-input first"
             type="number"
             id="umur"
             name="umur"
@@ -29,7 +29,7 @@ export default function FormInput(props: FormProps) {
           />
           <div className="data-label">Nomor Telepon</div>
           <input
-            className="data-input"
+            className="data-input first"
             type="number"
             id="telepon"
             name="telepon"

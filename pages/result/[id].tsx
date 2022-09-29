@@ -4,6 +4,7 @@ import { getCookie, setCookie } from "../../src/components/common/utils";
 import DashboardLayout from "../../src/components/DashboardLayout";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import styles from "./../../styles/pages/lastPages.module.scss";
+import BackNavigation from "../../src/components/backNavigation";
 
 export default function Result() {
   const [data, setData]: any = useState();
@@ -28,12 +29,12 @@ export default function Result() {
   const templateChat = [
     {
       id: 1,
-      title: "Ngirim Email Lamaran ke HRD",
+      title: "Mengirim Email Lamaran ke HRD",
       text: `Dengan hormat Bapak/Ibu HRD Perusahaan ${dataUser?.perusahaan}. <br/><br/>Perkenalkan saya ${dataUser?.nama}. Sehubungan dengan informasi lowongan kerja yang saya dapatkan melalui ${dataUser?.source}, dengan ini saya ingin melamar pekerjaan sebagai ${dataUser?.divisi} di ${dataUser?.perusahaan}.<br/><br/> Saya memiliki pengalaman pekerjaan sebagai ${dataUser?.divisi} selama ${dataUser?.experience} di perusahaan ${dataUser?.former_company}. Dengan pengalaman ini saya yakin skill dan pengalaman yang saya dapatkan dapat berkontribusi di ${dataUser?.perusahaan}.<br/><br/> Berikut saya lampirkan CV dan Portofolio saya sebagai bahan pertimbangan. Looking forward to hearing from you.<br/><br/>Best Regards<br/>${dataUser?.nama}<br/><br/>Kontak : ${dataUser?.telepon}`,
     },
     {
       id: 2,
-      title: "Menanyakan Ketersediaan Lowongan Pekerjaan",
+      title: "Ketersediaan Lowongan Pekerjaan",
       text: `Selamat pagi Bapak/Ibu HRD ${dataUser?.perusahaan}.<br/><br/> Perkenalkan saya ${dataUser?.nama}, saya mendapat nomer Bapak/Ibu melalui lowongan pekerjaan di ${dataUser?.source}. Saya ingin melamar sebagai ${dataUser?.divisi} di ${dataUser?.perusahaan}. Apakah lowongan masih tersedia?<br/><br/>Terima kasih`,
     },
     {
@@ -43,7 +44,7 @@ export default function Result() {
     },
     {
       id: 4,
-      title: "Meminta evaluasi ke HRD dari hasil interview",
+      title: "Evaluasi ke HRD dari hasil interview",
       text: `Selamat siang ${dataUser?.nama_hrd}<br/><br/> Terima kasih atas informasi tentang proses perekrutan saya di posisi ${dataUser?.divisi} .<br/><br/>Saya ingin ucapkan terima kasih banyak atas kesempatan yang diberikan oleh ${dataUser?.perusahaan} walaupun saya tidak terpilih menjadi ${dataUser?.divisi}. Proses interview yang saya lewati juga berkesan karena saya mendapatkan ilmu baru seputar ${dataUser?.divisi}.<br/><br/> Jika berkenan, saya ingin meminta feedback terkait dengan apa yang bisa saya perbaiki baik dari lamaran maupun interview agar jadi lebih baik kedepannya. Feedback yang Bapak/Ibu berikan akan berguna dan membantu saya dalam proses mencari pekerjaan<br/><br/>Sekali lagi saya ucapkan terima kasih. Saya harap dapat bekerja sama di waktu yang akan datang.<br/><br/>Salam,<br/>${dataUser?.nama}<br/>No. Wa: ${dataUser?.telepon}`,
     },
   ];
@@ -107,16 +108,18 @@ export default function Result() {
     <DashboardLayout pageTitle="Input">
       <div className="result-wrapper">
         <div>
-          <div className={styles.btnBack} onClick={handleBack}>
-            {"<"} Kembali
-          </div>
+          <BackNavigation />
           <div style={{ marginTop: "16px" }} id="template">
             {/* {templateChat.filter((e) => e.id === number)} */}
-            {selectedMessages && (
-              <div
-                dangerouslySetInnerHTML={{ __html: selectedMessages[0]?.text }}
-              />
-            )}
+            <div style={{ fontSize: "14px" }}>
+              {selectedMessages && (
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: selectedMessages[0]?.text,
+                  }}
+                />
+              )}
+            </div>
           </div>
         </div>
         <div style={{ marginBottom: "16px" }} className="btn-wrapper">

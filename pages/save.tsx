@@ -1,9 +1,14 @@
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
+import BackNavigation from "../src/components/backNavigation";
 import { deleteCookie, getCookie } from "../src/components/common/utils";
 import DashboardLayout from "../src/components/DashboardLayout";
+import copy from "./../public/assets/png/copy.png";
+import arrowDown from "./../public/assets/png/arrowDown.png";
+
 export default function Save() {
   const [listSaved, setListSaved]: any = useState();
   const [expand, setExpand]: any = useState(false);
@@ -47,7 +52,7 @@ export default function Save() {
     <DashboardLayout pageTitle="Saved Template">
       <div className="saved-wrapper">
         <div>
-          <div onClick={handleBack}>{`< Kembali`}</div>
+          <BackNavigation />
           <div className="saved-chat__wrapper">
             {listSaved?.length > 0 &&
               listSaved.map((item: any, idx: any) => {
@@ -60,17 +65,18 @@ export default function Save() {
                           text={item?.replace(/<[^>]+>/g, "")}
                           onCopy={handleCopy}
                         >
-                          <div className="saved-chat__btn">o</div>
+                          <div className="saved-chat__btn">
+                            <Image src={copy} />
+                          </div>
                         </CopyToClipboard>
                         <div
                           className="saved-chat__btn"
                           onClick={() => handleExpand(idx)}
                         >
-                          v
+                          <Image src={arrowDown} />
                         </div>
                       </div>
                     </div>
-                    <br />
                     {idExpanded === idx && expand && (
                       <div dangerouslySetInnerHTML={{ __html: item }} />
                     )}

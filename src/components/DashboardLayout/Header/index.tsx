@@ -56,7 +56,7 @@ export default function Header(props: HeaderProps) {
             >
               <Image src={HamburgerSvg} alt={``} />
             </div>
-            <div className={styles.titleApp}>Akhlaq Chat</div>
+            {/* <div className={styles.titleApp}>Akhlaq Chat</div> */}
             {/* <Image src={logoCompanyWhite} alt={``} height={24} /> */}
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import BackNavigation from "../../src/components/backNavigation";
 import { getCookie, setCookie } from "../../src/components/common/utils";
 import DashboardLayout from "../../src/components/DashboardLayout";
 import styles from "./../../styles/pages/InputedTema.module.scss";
@@ -78,9 +79,11 @@ export default function Form() {
           onChange={handleChange}
           placeholder="ex: Instagram"
         />
-        <button className="btn btn-100" type="submit">
-          Simpan
-        </button>
+        <div style={{ textAlign: "right" }}>
+          <button className="btn" type="submit">
+            Simpan
+          </button>
+        </div>
       </form>
     ) : id === 2 ? (
       <form onSubmit={handleSubmit}>
@@ -108,9 +111,11 @@ export default function Form() {
           onChange={handleChange}
           placeholder="ex: Instagram"
         />
-        <button className="btn btn-100" type="submit">
-          Simpan
-        </button>
+        <div style={{ textAlign: "right" }}>
+          <button className="btn" type="submit">
+            Simpan
+          </button>
+        </div>
       </form>
     ) : id === 3 ? (
       <form onSubmit={handleSubmit}>
@@ -146,9 +151,11 @@ export default function Form() {
           onChange={handleChange}
           placeholder="ex: 1 Januari 1990"
         />
-        <button className="btn btn-100" type="submit">
-          Simpan
-        </button>
+        <div style={{ textAlign: "right" }}>
+          <button className="btn" type="submit">
+            Simpan
+          </button>
+        </div>
       </form>
     ) : (
       <form onSubmit={handleSubmit}>
@@ -176,20 +183,19 @@ export default function Form() {
           onChange={handleChange}
           placeholder="ex: Kreatif"
         />
-        <button className="btn btn-100" type="submit">
-          Simpan
-        </button>
+        <div style={{ textAlign: "right" }}>
+          <button className="btn" type="submit">
+            Simpan
+          </button>
+        </div>
       </form>
     );
   };
 
   return (
     <DashboardLayout pageTitle="Input">
-      <div className="main-padding">
-        <div
-          className={styles.inputTema}
-          onClick={handleBack}
-        >{`< Kembali`}</div>
+      <BackNavigation />
+      <div className={styles.formInput}>
         <>{formInput(idTemplate)}</>
       </div>
     </DashboardLayout>

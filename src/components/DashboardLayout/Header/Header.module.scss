@@ -6,7 +6,7 @@ $breakpoint-xl: 1200px;
 
 .header {
   padding: 16px;
-  flex-basis: 72px;
+  flex-basis: 56px;
   display: flex;
   flex-shrink: 0;
   position: -webkit-sticky;
@@ -14,8 +14,8 @@ $breakpoint-xl: 1200px;
   top: 0;
   z-index: 1;
   align-items: center;
-  background-color: $blue-primary;
-  color: $white-primary;
+  background-color: #f8f6f6;
+  color: #252424;
 
   /* MOBILE */
   .mobile {
@@ -29,6 +29,7 @@ $breakpoint-xl: 1200px;
     .titleApp {
       margin-left: 8px;
       font-weight: 600;
+      font-size: 14px;
     }
 
     .hamburger {

@@ -20,18 +20,18 @@ if (tmp) {
 export const templateChat = [
   {
     id: 1,
-    title: "Ngirim Email Lamaran ke HRD",
+    title: "Mengirim Email Lamaran",
   },
   {
     id: 2,
-    title: "Menanyakan Ketersediaan Lowongan Pekerjaan",
+    title: "Ketersediaan Lowongan Kerja",
   },
   {
     id: 3,
-    title: "Email untuk follow up hasil interview",
+    title: "Follow Up Hasil Interview",
   },
   {
     id: 4,
-    title: "Meminta evaluasi ke HRD dari hasil interview",
+    title: "Evaluasi Hasil Interview",
   },
 ];
