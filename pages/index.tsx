@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -7,8 +8,10 @@ import FormInput from "../src/components/FormInput";
 import styles from "./../styles/pages/Home.module.scss";
 import sun from "./../public/assets/png/sun.png";
 import moon from "./../public/assets/png/moon.png";
+import Router, { useRouter } from "next/router";
 
 export default function Home() {
+  const router = useRouter();
   const [input, setInput]: any = useState(false);
   const [data, setData]: any = useState();
   const [dataCookie, setDataCookie]: any = useState();
@@ -35,6 +38,10 @@ export default function Home() {
   }, [data]);
 
   useEffect(() => {
+    window?.ReactNativeWebView?.postMessage(JSON.stringify(dataCookie));
+  }, [dataCookie]);
+
+  useEffect(() => {
     if (getCookie("data") !== "") {
       let tmp = getCookie("data");
       if (tmp !== undefined) {
@@ -46,6 +53,7 @@ export default function Home() {
   const handleSubmit = (e: any) => {
     e.preventDefault();
     setCookie("data", JSON.stringify(data), 14);
+    router.reload();
     if (getCookie("data") !== "") {
       setInput(false);
     }

@@ -61,7 +61,6 @@ export default function Result() {
   useEffect(() => {
     if (popup) {
       setCookie("data", JSON.stringify(combine), 14);
-      window?.ReactNativeWebView?.postMessage(JSON.stringify(combine));
     }
   }, [popup, combine]);
 
@@ -76,11 +75,6 @@ export default function Result() {
       setCombine(tmp);
     }
   }, [messages]);
-
-  useEffect(() => {
-    if (popup) {
-    }
-  }, [popup]);
 
   useEffect(() => {
     if (popup) {
