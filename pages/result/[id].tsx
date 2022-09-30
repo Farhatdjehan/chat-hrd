@@ -96,12 +96,9 @@ export default function Result() {
     setPopup(true);
     let tmp = document.getElementById("template")?.innerHTML;
     const newData = [...messages];
+    // console.log(tmp);
     newData.push(tmp);
     setMessages(newData);
-  };
-
-  const handleBack = () => {
-    router.back();
   };
 
   return (
@@ -109,17 +106,15 @@ export default function Result() {
       <div className="result-wrapper">
         <div>
           <BackNavigation />
-          <div style={{ marginTop: "16px" }} id="template">
+          <div style={{ marginTop: "16px", fontSize: "14px" }} id="template">
             {/* {templateChat.filter((e) => e.id === number)} */}
-            <div style={{ fontSize: "14px" }}>
-              {selectedMessages && (
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: selectedMessages[0]?.text,
-                  }}
-                />
-              )}
-            </div>
+            {selectedMessages && (
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: selectedMessages[0]?.text,
+                }}
+              />
+            )}
           </div>
         </div>
         <div style={{ marginBottom: "16px" }} className="btn-wrapper">
