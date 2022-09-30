@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Router, useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { getCookie, setCookie } from "../../src/components/common/utils";
@@ -99,7 +100,15 @@ export default function Result() {
     // console.log(tmp);
     newData.push(tmp);
     setMessages(newData);
-    window.postMessage(JSON.stringify(messages), "*");
+    window?.ReactNativeWebView?.postMessage("Hei");
+
+    // window.postMessage(
+    //   JSON.stringify({ message: "your message", data: "your data" })
+    // )
+  };
+
+  const sendDataToReactNativeApp = async () => {
+    window.ReactNativeWebView.postMessage("DATA SEND TO RN APP");
   };
 
   return (
