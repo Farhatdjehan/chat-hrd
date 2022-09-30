@@ -8,6 +8,7 @@ import FormInput from "../src/components/FormInput";
 import styles from "./../styles/pages/Home.module.scss";
 import sun from "./../public/assets/png/sun.png";
 import moon from "./../public/assets/png/moon.png";
+import chat from "./../public/assets/png/chat.png";
 import Router, { useRouter } from "next/router";
 
 export default function Home() {
@@ -38,8 +39,16 @@ export default function Home() {
   }, [data]);
 
   useEffect(() => {
-    window?.ReactNativeWebView?.postMessage(JSON.stringify(dataCookie));
+    if (dataCookie) {
+      window?.ReactNativeWebView?.postMessage(JSON.stringify(dataCookie));
+    }
   }, [dataCookie]);
+
+  useEffect(() => {
+    // window.addEventListener("message", (message) => {
+    //   console.log(message);
+    // });
+  }, []);
 
   useEffect(() => {
     if (getCookie("data") !== "") {
@@ -89,7 +98,9 @@ export default function Home() {
           <div className="card-list__wrapper">
             <Link href="/tema/input">
               <a className="card-template">
-                <div className="card-illustration"></div>
+                <div className="card-illustration">
+                  <Image src={chat} width={24} height={24} />
+                </div>
                 <div className="card-wrapper__text">
                   <div className="card-text">Chat HRD</div>
                   <div className="card-subtext">Lebih sopan dengan HRD</div>

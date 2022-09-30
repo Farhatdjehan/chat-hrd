@@ -21,9 +21,15 @@
   display: flex;
   align-items: center;
   .templateTop {
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 400;
     line-height: 16px;
+    background: #1366f3;
+    width: fit-content;
+    padding: 1px 10px;
+    border-radius: 4px;
+    color: white;
+    margin-bottom: 4px;
   }
 }
 .templateIllustrator {
