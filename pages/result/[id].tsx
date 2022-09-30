@@ -65,7 +65,6 @@ export default function Result() {
   useEffect(() => {
     // console.log(messages);
     if (messages?.length > 0) {
-      window.postMessage(JSON.stringify(messages), "*");
       setCookie("messages", JSON.stringify(messages), 14);
     }
   }, [messages]);
@@ -100,6 +99,7 @@ export default function Result() {
     // console.log(tmp);
     newData.push(tmp);
     setMessages(newData);
+    window.postMessage(JSON.stringify(messages), "*");
   };
 
   return (
