@@ -13,40 +13,31 @@ export default function Result() {
   const [copied, setCopied]: any = useState();
   const [messages, setMessages]: any = useState([]);
   const [selectedMessages, setSelectedMessages]: any = useState();
-  const [dataUser, setDataUser]: any = useState();
   const [popup, setPopup]: any = useState();
   const [textPopup, setTextPopup]: any = useState();
+  const [combine, setCombine]: any = useState();
   const router = useRouter();
-
-  useEffect(() => {
-    let resultFinal;
-    let tmp = getCookie("data");
-    if (tmp) {
-      resultFinal = JSON.parse(tmp);
-      setDataUser(resultFinal);
-    }
-  }, []);
 
   const templateChat = [
     {
       id: 1,
       title: "Mengirim Email Lamaran ke HRD",
-      text: `Dengan hormat Bapak/Ibu HRD Perusahaan ${dataUser?.perusahaan}. <br/><br/>Perkenalkan saya ${dataUser?.nama}. Sehubungan dengan informasi lowongan kerja yang saya dapatkan melalui ${dataUser?.source}, dengan ini saya ingin melamar pekerjaan sebagai ${dataUser?.divisi} di ${dataUser?.perusahaan}.<br/><br/> Saya memiliki pengalaman pekerjaan sebagai ${dataUser?.divisi} selama ${dataUser?.experience} di perusahaan ${dataUser?.former_company}. Dengan pengalaman ini saya yakin skill dan pengalaman yang saya dapatkan dapat berkontribusi di ${dataUser?.perusahaan}.<br/><br/> Berikut saya lampirkan CV dan Portofolio saya sebagai bahan pertimbangan. Looking forward to hearing from you.<br/><br/>Best Regards<br/>${dataUser?.nama}<br/><br/>Kontak : ${dataUser?.telepon}`,
+      text: `Dengan hormat Bapak/Ibu HRD Perusahaan ${combine?.perusahaan}. <br/><br/>Perkenalkan saya ${combine?.nama}. Sehubungan dengan informasi lowongan kerja yang saya dapatkan melalui ${combine?.source}, dengan ini saya ingin melamar pekerjaan sebagai ${combine?.divisi} di ${combine?.perusahaan}.<br/><br/> Saya memiliki pengalaman pekerjaan sebagai ${combine?.divisi} selama ${combine?.experience} di perusahaan ${combine?.former_company}. Dengan pengalaman ini saya yakin skill dan pengalaman yang saya dapatkan dapat berkontribusi di ${combine?.perusahaan}.<br/><br/> Berikut saya lampirkan CV dan Portofolio saya sebagai bahan pertimbangan. Looking forward to hearing from you.<br/><br/>Best Regards<br/>${combine?.nama}<br/><br/>Kontak : ${combine?.telepon}`,
     },
     {
       id: 2,
       title: "Ketersediaan Lowongan Pekerjaan",
-      text: `Selamat pagi Bapak/Ibu HRD ${dataUser?.perusahaan}.<br/><br/> Perkenalkan saya ${dataUser?.nama}, saya mendapat nomer Bapak/Ibu melalui lowongan pekerjaan di ${dataUser?.source}. Saya ingin melamar sebagai ${dataUser?.divisi} di ${dataUser?.perusahaan}. Apakah lowongan masih tersedia?<br/><br/>Terima kasih`,
+      text: `Selamat pagi Bapak/Ibu HRD ${combine?.perusahaan}.<br/><br/> Perkenalkan saya ${combine?.nama}, saya mendapat nomer Bapak/Ibu melalui lowongan pekerjaan di ${combine?.source}. Saya ingin melamar sebagai ${combine?.divisi} di ${combine?.perusahaan}. Apakah lowongan masih tersedia?<br/><br/>Terima kasih`,
     },
     {
       id: 3,
       title: "Email untuk follow up hasil interview",
-      text: `Selamat siang ${dataUser?.nama_hrd}.<br/><br/>Nama saya ${dataUser?.nama}, salah satu kandidat ${dataUser?.divisi} di ${dataUser?.perusahaan} yang telah melakukan interview di tanggal ${dataUser?.tanggal}.<br/><br/> Sebelumnya saya mau berterima kasih atas kesempatan yang diberikan kepada saya. Saya mengirimkan email ini untuk menanyakan bagaimana kelanjutan dari proses rekrutmen saya posisi ${dataUser?.divisi} di ${dataUser?.perusahaan} .<br/><br/> Saya berharap untuk dapat bergabung dan tumbuh bersama dengan ${dataUser?.perusahaan}. Terima kasih atas pertimbangannya<br/><br/>Salam,<br/>${dataUser?.nama}<br/>No. Wa: ${dataUser?.telepon}`,
+      text: `Selamat siang ${combine?.nama_hrd}.<br/><br/>Nama saya ${combine?.nama}, salah satu kandidat ${combine?.divisi} di ${combine?.perusahaan} yang telah melakukan interview di tanggal ${combine?.tanggal}.<br/><br/> Sebelumnya saya mau berterima kasih atas kesempatan yang diberikan kepada saya. Saya mengirimkan email ini untuk menanyakan bagaimana kelanjutan dari proses rekrutmen saya posisi ${combine?.divisi} di ${combine?.perusahaan} .<br/><br/> Saya berharap untuk dapat bergabung dan tumbuh bersama dengan ${combine?.perusahaan}. Terima kasih atas pertimbangannya<br/><br/>Salam,<br/>${combine?.nama}<br/>No. Wa: ${combine?.telepon}`,
     },
     {
       id: 4,
       title: "Evaluasi ke HRD dari hasil interview",
-      text: `Selamat siang ${dataUser?.nama_hrd}<br/><br/> Terima kasih atas informasi tentang proses perekrutan saya di posisi ${dataUser?.divisi} .<br/><br/>Saya ingin ucapkan terima kasih banyak atas kesempatan yang diberikan oleh ${dataUser?.perusahaan} walaupun saya tidak terpilih menjadi ${dataUser?.divisi}. Proses interview yang saya lewati juga berkesan karena saya mendapatkan ilmu baru seputar ${dataUser?.divisi}.<br/><br/> Jika berkenan, saya ingin meminta feedback terkait dengan apa yang bisa saya perbaiki baik dari lamaran maupun interview agar jadi lebih baik kedepannya. Feedback yang Bapak/Ibu berikan akan berguna dan membantu saya dalam proses mencari pekerjaan<br/><br/>Sekali lagi saya ucapkan terima kasih. Saya harap dapat bekerja sama di waktu yang akan datang.<br/><br/>Salam,<br/>${dataUser?.nama}<br/>No. Wa: ${dataUser?.telepon}`,
+      text: `Selamat siang ${combine?.nama_hrd}<br/><br/> Terima kasih atas informasi tentang proses perekrutan saya di posisi ${combine?.divisi} .<br/><br/>Saya ingin ucapkan terima kasih banyak atas kesempatan yang diberikan oleh ${combine?.perusahaan} walaupun saya tidak terpilih menjadi ${combine?.divisi}. Proses interview yang saya lewati juga berkesan karena saya mendapatkan ilmu baru seputar ${combine?.divisi}.<br/><br/> Jika berkenan, saya ingin meminta feedback terkait dengan apa yang bisa saya perbaiki baik dari lamaran maupun interview agar jadi lebih baik kedepannya. Feedback yang Bapak/Ibu berikan akan berguna dan membantu saya dalam proses mencari pekerjaan<br/><br/>Sekali lagi saya ucapkan terima kasih. Saya harap dapat bekerja sama di waktu yang akan datang.<br/><br/>Salam,<br/>${combine?.nama}<br/>No. Wa: ${combine?.telepon}`,
     },
   ];
 
@@ -60,23 +51,36 @@ export default function Result() {
   }, [router]);
 
   useEffect(() => {
+    let getData = getCookie("data");
+    if (getData !== undefined) {
+      let tmpGetData = JSON.parse(getData);
+      setCombine(tmpGetData);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (popup) {
+      setCookie("data", JSON.stringify(combine), 14);
+      window?.ReactNativeWebView?.postMessage(JSON.stringify(combine));
+    }
+  }, [popup, combine]);
+
+  useEffect(() => {
     setSelectedMessages(templateChat.filter((e) => e.id === number));
   }, [number]);
 
   useEffect(() => {
-    // console.log(messages);
     if (messages?.length > 0) {
-      setCookie("messages", JSON.stringify(messages), 14);
+      let tmp = { ...combine };
+      tmp.message = [...messages];
+      setCombine(tmp);
     }
   }, [messages]);
 
   useEffect(() => {
-    let getData = getCookie("messages");
-    if (getData) {
-      let tmpGetData = JSON.parse(getData);
-      setMessages(tmpGetData);
+    if (popup) {
     }
-  }, []);
+  }, [popup]);
 
   useEffect(() => {
     if (popup) {
@@ -96,19 +100,10 @@ export default function Result() {
     setTextPopup("Berhasil Menyimpan");
     setPopup(true);
     let tmp = document.getElementById("template")?.innerHTML;
-    const newData = [...messages];
-    // console.log(tmp);
+    let obj = combine?.message;
+    const newData = [...obj];
     newData.push(tmp);
     setMessages(newData);
-    window?.ReactNativeWebView?.postMessage("Hei");
-
-    // window.postMessage(
-    //   JSON.stringify({ message: "your message", data: "your data" })
-    // )
-  };
-
-  const sendDataToReactNativeApp = async () => {
-    window.ReactNativeWebView.postMessage("DATA SEND TO RN APP");
   };
 
   return (

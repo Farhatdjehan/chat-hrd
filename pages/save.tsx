@@ -17,8 +17,8 @@ export default function Save() {
   const router = useRouter();
 
   useEffect(() => {
-    if (getCookie("messages") !== "") {
-      let tmp = getCookie("messages");
+    if (getCookie("data") !== "") {
+      let tmp = getCookie("data");
       if (tmp !== undefined) {
         setListSaved(JSON.parse(tmp));
       }
@@ -33,12 +33,8 @@ export default function Save() {
     }
   }, [copied]);
 
-  const handleBack = () => {
-    router.back();
-  };
-
   const handleDelete = () => {
-    deleteCookie("messages");
+    deleteCookie("data");
     router.reload();
   };
   const handleCopy = () => {
@@ -54,8 +50,8 @@ export default function Save() {
         <div>
           <BackNavigation />
           <div className="saved-chat__wrapper">
-            {listSaved?.length > 0 &&
-              listSaved.map((item: any, idx: any) => {
+            {listSaved?.message?.length > 0 &&
+              listSaved?.message?.map((item: any, idx: any) => {
                 return (
                   <div className="list-saved__chat" key={idx}>
                     <div className="wrapper-saved__chat">
