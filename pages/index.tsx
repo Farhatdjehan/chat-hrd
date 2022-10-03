@@ -26,7 +26,7 @@ export default function Home() {
     } else if (hours > 12) {
       setTime("Siang");
     } else if (hours > 0) {
-      setTime("Page");
+      setTime("Pagi");
     } else {
       setTime("Datang");
     }
@@ -34,7 +34,9 @@ export default function Home() {
 
   useEffect(() => {
     if (getCookie("data") === "") {
-      setInput(true);
+      router.push("/first");
+    } else {
+      router.push("/");
     }
   }, [data]);
 
@@ -45,9 +47,9 @@ export default function Home() {
   }, [dataCookie]);
 
   useEffect(() => {
-    // window.addEventListener("message", (message) => {
-    //   console.log(message);
-    // });
+    window.addEventListener("message", (message) => {
+      console.log(message);
+    });
   }, []);
 
   useEffect(() => {
@@ -76,48 +78,48 @@ export default function Home() {
 
   return (
     <>
-      {!input && (
-        <DashboardLayout pageTitle="Home">
-          <div className={styles.greetingMsg}>
-            <span
-              style={{
-                marginRight: "6px",
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
-              {time === "Sore" || time === "Siang" ? (
-                <Image src={sun} width={16} height={16} />
-              ) : (
-                <Image src={moon} width={16} height={16} />
-              )}
-            </span>
-            Selamat {time}!
-          </div>
-          <div className={styles.greetingMsgMain}>Hi, {dataCookie?.nama}</div>
-          <div className="card-list__wrapper">
-            <Link href="/tema/input">
-              <a className="card-template">
-                <div className="card-illustration">
-                  <Image src={chat} width={24} height={24} />
-                </div>
-                <div className="card-wrapper__text">
-                  <div className="card-text">Chat HRD</div>
-                  <div className="card-subtext">Lebih sopan dengan HRD</div>
-                </div>
-              </a>
-            </Link>
-            <Link href="#">
-              <a className="card-template">
-                <div className="card-text">Segera...</div>
-              </a>
-            </Link>
-          </div>
-        </DashboardLayout>
-      )}
-      {input && (
+      {/* {!input && ( */}
+      <DashboardLayout pageTitle="Home">
+        <div className={styles.greetingMsg}>
+          <span
+            style={{
+              marginRight: "6px",
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            {time === "Sore" || time === "Siang" || time === "Pagi" ? (
+              <Image src={sun} width={16} height={16} />
+            ) : (
+              <Image src={moon} width={16} height={16} />
+            )}
+          </span>
+          Selamat {time}!
+        </div>
+        <div className={styles.greetingMsgMain}>Hi, {dataCookie?.nama}</div>
+        <div className="card-list__wrapper">
+          <Link href="/tema/input">
+            <a className="card-template">
+              <div className="card-illustration">
+                <Image src={chat} width={24} height={24} />
+              </div>
+              <div className="card-wrapper__text">
+                <div className="card-text">Chat HRD</div>
+                <div className="card-subtext">Lebih sopan dengan HRD</div>
+              </div>
+            </a>
+          </Link>
+          <Link href="#">
+            <a className="card-template">
+              <div className="card-text">Segera...</div>
+            </a>
+          </Link>
+        </div>
+      </DashboardLayout>
+      {/* )} */}
+      {/* {input && (
         <FormInput handleSubmit={handleSubmit} handleChange={handleChange} />
-      )}
+      )} */}
     </>
   );
 }

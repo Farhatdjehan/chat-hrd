@@ -19,14 +19,13 @@ export default function Form() {
     }
   }, []);
 
-  const handleBack = () => {
-    router.back();
-  };
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
     setCookie("data", JSON.stringify(data), 14);
-
     router.push(`/result/${router?.query?.form}`);
   };
 
@@ -36,159 +35,53 @@ export default function Form() {
     setData(newData);
   };
 
+  const formDynamic = (id: string, placeholder: string, label: string) => {
+    return (
+      <>
+        <div className="data-label">{label}</div>
+        <input
+          className="data-input"
+          id={id}
+          name={id}
+          onChange={handleChange}
+          placeholder={placeholder}
+          required
+        />
+        {/* <div style={{ fontSize: "12px", marginBottom: "8px" }}>
+          Harap isi form ini ya!
+        </div> */}
+      </>
+    );
+  };
+
   const formInput = (id: number) => {
     return id === 1 ? (
-      <form onSubmit={handleSubmit}>
-        <div className="data-label">Nama Perusahaan</div>
-        <input
-          className="data-input"
-          id="perusahaan"
-          name="perusahaan"
-          onChange={handleChange}
-          placeholder="ex: PT. ABC"
-        />
-        <div className="data-label">Divisi Melamar</div>
-        <input
-          className="data-input"
-          id="divisi"
-          name="divisi"
-          onChange={handleChange}
-          placeholder="ex: Social Media Specialis"
-        />
-        <div className="data-label">Perusahaan Sebelumnya</div>
-        <input
-          className="data-input"
-          id="former_company"
-          name="former_company"
-          placeholder="ex: PT. ABC"
-          onChange={handleChange}
-        />
-        <div className="data-label">Pengalaman Bekerja</div>
-        <input
-          className="data-input"
-          id="experience"
-          name="experience"
-          onChange={handleChange}
-          placeholder="ex: 1 Tahun"
-        />
-        <div className="data-label">Sumber Lowongan</div>
-        <input
-          className="data-input"
-          id="source"
-          name="source"
-          onChange={handleChange}
-          placeholder="ex: Instagram"
-        />
-        <div style={{ textAlign: "right" }}>
-          <button className="btn" type="submit">
-            Simpan
-          </button>
-        </div>
-      </form>
+      <>
+        {formDynamic("perusahaan", "ex: PT. ABC", "Nama Perusahaan")}
+        {formDynamic("divisi", "ex: Social Media Spesialis", "Divisi Melamar")}
+        {formDynamic("former_company", "ex: PT. ABC", "Perusahaan Sebelumnya")}
+        {formDynamic("experience", "ex: 1 Tahun", "Pengalaman Bekerja")}
+        {formDynamic("source", "ex: Instagram", "Sumber Lowongan")}
+      </>
     ) : id === 2 ? (
-      <form onSubmit={handleSubmit}>
-        <div className="data-label">Nama Perusahaan</div>
-        <input
-          className="data-input"
-          id="perusahaan"
-          name="perusahaan"
-          onChange={handleChange}
-          placeholder="ex: PT. ABC"
-        />
-        <div className="data-label">Divisi Melamar</div>
-        <input
-          className="data-input"
-          id="divisi"
-          name="divisi"
-          onChange={handleChange}
-          placeholder="ex: Kreatif"
-        />
-        <div className="data-label">Sumber Lowongan</div>
-        <input
-          className="data-input"
-          id="source"
-          name="source"
-          onChange={handleChange}
-          placeholder="ex: Instagram"
-        />
-        <div style={{ textAlign: "right" }}>
-          <button className="btn" type="submit">
-            Simpan
-          </button>
-        </div>
-      </form>
+      <>
+        {formDynamic("perusahaan", "ex: PT. ABC", "Nama Perusahaan")}
+        {formDynamic("divisi", "ex: Social Media Spesialis", "Divisi Melamar")}
+        {formDynamic("source", "ex: Instagram", "Sumber Lowongan")}
+      </>
     ) : id === 3 ? (
-      <form onSubmit={handleSubmit}>
-        <div className="data-label">Nama HRD</div>
-        <input
-          className="data-input"
-          id="nama_hrd"
-          name="nama_hrd"
-          onChange={handleChange}
-          placeholder="ex: Bapak/Ibu John Doe"
-        />
-        <div className="data-label">Nama Perusahaan</div>
-        <input
-          className="data-input"
-          id="perusahaan"
-          name="perusahaan"
-          onChange={handleChange}
-          placeholder="ex: PT. ABC"
-        />
-        <div className="data-label">Divisi Melamar</div>
-        <input
-          className="data-input"
-          id="divisi"
-          name="divisi"
-          onChange={handleChange}
-          placeholder="ex: Kreatif"
-        />
-        <div className="data-label">Tanggal Melamar</div>
-        <input
-          className="data-input"
-          id="tanggal"
-          name="tanggal"
-          onChange={handleChange}
-          placeholder="ex: 1 Januari 1990"
-        />
-        <div style={{ textAlign: "right" }}>
-          <button className="btn" type="submit">
-            Simpan
-          </button>
-        </div>
-      </form>
+      <>
+        {formDynamic("nama_hrd", "ex: Bapak/Ibu John Doe", "Nama HRD")}
+        {formDynamic("perusahaan", "ex: PT. ABC", "Nama Perusahaan")}
+        {formDynamic("divisi", "ex: Kreatif", "Divisi Melamar")}
+        {formDynamic("tanggal", "ex: 1 Januari 2012", "Tanggal Melamar")}
+      </>
     ) : (
-      <form onSubmit={handleSubmit}>
-        <div className="data-label">Nama HRD</div>
-        <input
-          className="data-input"
-          id="nama_hrd"
-          name="nama_hrd"
-          onChange={handleChange}
-          placeholder="ex: Bapak/Ibu John Doe"
-        />
-        <div className="data-label">Nama Perusahaan</div>
-        <input
-          className="data-input"
-          id="perusahaan"
-          name="perusahaan"
-          onChange={handleChange}
-          placeholder="ex: PT. ABC"
-        />
-        <div className="data-label">Divisi Melamar</div>
-        <input
-          className="data-input"
-          id="divisi"
-          name="divisi"
-          onChange={handleChange}
-          placeholder="ex: Kreatif"
-        />
-        <div style={{ textAlign: "right" }}>
-          <button className="btn" type="submit">
-            Simpan
-          </button>
-        </div>
-      </form>
+      <>
+        {formDynamic("nama_hrd", "ex: Bapak/Ibu John Doe", "Nama HRD")}
+        {formDynamic("perusahaan", "ex: PT. ABC", "Nama Perusahaan")}
+        {formDynamic("divisi", "ex: Kreatif", "Divisi Melamar")}
+      </>
     );
   };
 
@@ -196,7 +89,14 @@ export default function Form() {
     <DashboardLayout pageTitle="Input">
       <BackNavigation />
       <div className={styles.formInput}>
-        <>{formInput(idTemplate)}</>
+        <form onSubmit={handleSubmit}>
+          {formInput(idTemplate)}
+          <div style={{ textAlign: "right" }}>
+            <button className="btn" type="submit">
+              Simpan
+            </button>
+          </div>
+        </form>
       </div>
     </DashboardLayout>
   );

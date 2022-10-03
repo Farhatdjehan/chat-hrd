@@ -31,11 +31,16 @@ export default function Sidebar(props: SidebarProps) {
     }
   }, []);
 
+  useEffect(() => {}, [data]);
+
   return (
     <aside className={styles.sidebar}>
       <ProSidebar breakPoint="xxl" toggled={toggle} onToggle={handleToggle}>
         <SidebarContent>
           <div className="header-sidebar">
+            <Link href="/profile">
+              <a className="button-edit">Edit Profil</a>
+            </Link>
             <div className="header-information">{data?.nama}</div>
             <div>{data?.telepon}</div>
           </div>

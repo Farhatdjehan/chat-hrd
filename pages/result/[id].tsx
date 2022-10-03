@@ -22,22 +22,58 @@ export default function Result() {
     {
       id: 1,
       title: "Mengirim Email Lamaran ke HRD",
-      text: `Dengan hormat Bapak/Ibu HRD Perusahaan ${combine?.perusahaan}. <br/><br/>Perkenalkan saya ${combine?.nama}. Sehubungan dengan informasi lowongan kerja yang saya dapatkan melalui ${combine?.source}, dengan ini saya ingin melamar pekerjaan sebagai ${combine?.divisi} di ${combine?.perusahaan}.<br/><br/> Saya memiliki pengalaman pekerjaan sebagai ${combine?.divisi} selama ${combine?.experience} di perusahaan ${combine?.former_company}. Dengan pengalaman ini saya yakin skill dan pengalaman yang saya dapatkan dapat berkontribusi di ${combine?.perusahaan}.<br/><br/> Berikut saya lampirkan CV dan Portofolio saya sebagai bahan pertimbangan. Looking forward to hearing from you.<br/><br/>Best Regards<br/>${combine?.nama}<br/><br/>Kontak : ${combine?.telepon}`,
+      text: `Dengan hormat Bapak/Ibu HRD Perusahaan ${combine?.perusahaan}.
+
+      Perkenalkan saya ${combine?.nama}. Sehubungan dengan informasi lowongan kerja yang saya dapatkan melalui ${combine?.source}, dengan ini saya ingin melamar pekerjaan sebagai ${combine?.divisi} di ${combine?.perusahaan}.
+      
+      Saya memiliki pengalaman pekerjaan sebagai ${combine?.divisi} selama ${combine?.experience} di perusahaan ${combine?.former_company}. Dengan pengalaman ini saya yakin skill dan pengalaman yang saya dapatkan dapat berkontribusi di ${combine?.perusahaan}.
+      
+      Berikut saya lampirkan CV dan Portofolio saya sebagai bahan pertimbangan. Looking forward to hearing from you.
+      Best Regards
+      ${combine?.nama}
+      
+      Kontak : ${combine?.telepon}`,
     },
     {
       id: 2,
       title: "Ketersediaan Lowongan Pekerjaan",
-      text: `Selamat pagi Bapak/Ibu HRD ${combine?.perusahaan}.<br/><br/> Perkenalkan saya ${combine?.nama}, saya mendapat nomer Bapak/Ibu melalui lowongan pekerjaan di ${combine?.source}. Saya ingin melamar sebagai ${combine?.divisi} di ${combine?.perusahaan}. Apakah lowongan masih tersedia?<br/><br/>Terima kasih`,
+      text: `Selamat pagi Bapak/Ibu HRD ${combine?.perusahaan}.
+      
+      Perkenalkan saya ${combine?.nama}, saya mendapat nomer Bapak/Ibu melalui lowongan pekerjaan di ${combine?.source}. Saya ingin melamar sebagai ${combine?.divisi} di ${combine?.perusahaan}. Apakah lowongan masih tersedia?
+      
+      Terima kasih`,
     },
     {
       id: 3,
       title: "Email untuk follow up hasil interview",
-      text: `Selamat siang ${combine?.nama_hrd}.<br/><br/>Nama saya ${combine?.nama}, salah satu kandidat ${combine?.divisi} di ${combine?.perusahaan} yang telah melakukan interview di tanggal ${combine?.tanggal}.<br/><br/> Sebelumnya saya mau berterima kasih atas kesempatan yang diberikan kepada saya. Saya mengirimkan email ini untuk menanyakan bagaimana kelanjutan dari proses rekrutmen saya posisi ${combine?.divisi} di ${combine?.perusahaan} .<br/><br/> Saya berharap untuk dapat bergabung dan tumbuh bersama dengan ${combine?.perusahaan}. Terima kasih atas pertimbangannya<br/><br/>Salam,<br/>${combine?.nama}<br/>No. Wa: ${combine?.telepon}`,
+      text: `Selamat siang ${combine?.nama_hrd}.
+      
+      Nama saya ${combine?.nama}, salah satu kandidat ${combine?.divisi} di ${combine?.perusahaan} yang telah melakukan interview di tanggal ${combine?.tanggal}.
+      
+      Sebelumnya saya mau berterima kasih atas kesempatan yang diberikan kepada saya. Saya mengirimkan email ini untuk menanyakan bagaimana kelanjutan dari proses rekrutmen saya posisi ${combine?.divisi} di ${combine?.perusahaan} .
+      
+      Saya berharap untuk dapat bergabung dan tumbuh bersama dengan ${combine?.perusahaan}. Terima kasih atas pertimbangannya
+      
+      Salam,
+      ${combine?.nama}
+      No. Wa: ${combine?.telepon}`,
     },
     {
       id: 4,
       title: "Evaluasi ke HRD dari hasil interview",
-      text: `Selamat siang ${combine?.nama_hrd}<br/><br/> Terima kasih atas informasi tentang proses perekrutan saya di posisi ${combine?.divisi} .<br/><br/>Saya ingin ucapkan terima kasih banyak atas kesempatan yang diberikan oleh ${combine?.perusahaan} walaupun saya tidak terpilih menjadi ${combine?.divisi}. Proses interview yang saya lewati juga berkesan karena saya mendapatkan ilmu baru seputar ${combine?.divisi}.<br/><br/> Jika berkenan, saya ingin meminta feedback terkait dengan apa yang bisa saya perbaiki baik dari lamaran maupun interview agar jadi lebih baik kedepannya. Feedback yang Bapak/Ibu berikan akan berguna dan membantu saya dalam proses mencari pekerjaan<br/><br/>Sekali lagi saya ucapkan terima kasih. Saya harap dapat bekerja sama di waktu yang akan datang.<br/><br/>Salam,<br/>${combine?.nama}<br/>No. Wa: ${combine?.telepon}`,
+      text: `Selamat siang ${combine?.nama_hrd}
+      
+      Terima kasih atas informasi tentang proses perekrutan saya di posisi ${combine?.divisi}.
+      
+      Saya ingin ucapkan terima kasih banyak atas kesempatan yang diberikan oleh ${combine?.perusahaan} walaupun saya tidak terpilih menjadi ${combine?.divisi}. Proses interview yang saya lewati juga berkesan karena saya mendapatkan ilmu baru seputar ${combine?.divisi}.
+      
+      Jika berkenan, saya ingin meminta feedback terkait dengan apa yang bisa saya perbaiki baik dari lamaran maupun interview agar jadi lebih baik kedepannya. Feedback yang Bapak/Ibu berikan akan berguna dan membantu saya dalam proses mencari pekerjaan.
+      
+      Sekali lagi saya ucapkan terima kasih. Saya harap dapat bekerja sama di waktu yang akan datang.
+      
+      Salam,
+      ${combine?.nama}
+      No. Wa: ${combine?.telepon}`,
     },
   ];
 
@@ -59,8 +95,16 @@ export default function Result() {
   }, []);
 
   useEffect(() => {
+    console.log(combine);
+  }, [combine]);
+
+  useEffect(() => {
     if (popup) {
       setCookie("data", JSON.stringify(combine), 14);
+      console.log(combine);
+      if (combine?.message) {
+        window?.ReactNativeWebView?.postMessage(JSON.stringify(combine));
+      }
     }
   }, [popup, combine]);
 
@@ -94,7 +138,13 @@ export default function Result() {
     setTextPopup("Berhasil Menyimpan");
     setPopup(true);
     let tmp = document.getElementById("template")?.innerHTML;
-    let obj = combine?.message;
+    let objTmp = combine.message;
+    if (objTmp?.length > 0) {
+      objTmp = [...combine.message];
+    } else {
+      objTmp = [];
+    }
+    let obj = objTmp;
     const newData = [...obj];
     newData.push(tmp);
     setMessages(newData);

@@ -50,7 +50,7 @@ export default function Save() {
         <div>
           <BackNavigation />
           <div className="saved-chat__wrapper">
-            {listSaved?.message?.length > 0 &&
+            {listSaved?.message?.length > 0 ? (
               listSaved?.message?.map((item: any, idx: any) => {
                 return (
                   <div className="list-saved__chat" key={idx}>
@@ -78,18 +78,23 @@ export default function Save() {
                     )}
                   </div>
                 );
-              })}
+              })
+            ) : (
+              <div style={{ textAlign: "center" }}>Template Tidak Tersedia</div>
+            )}
           </div>
         </div>
-        <div>
-          <button
-            style={{ width: "100%", marginBottom: "16px", marginTop: "24px" }}
-            className="btn"
-            onClick={handleDelete}
-          >
-            Hapus Template
-          </button>
-        </div>
+        {listSaved?.message?.length > 0 && (
+          <div>
+            <button
+              style={{ width: "100%", marginBottom: "16px", marginTop: "24px" }}
+              className="btn"
+              onClick={handleDelete}
+            >
+              Hapus Template
+            </button>
+          </div>
+        )}
       </div>
 
       {copied && <div className="popup-show">Berhasil Menyalin</div>}
