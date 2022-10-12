@@ -8,11 +8,6 @@ import Image from "next/image";
 import BackNavigation from "../../src/components/backNavigation";
 
 export default function TemaChat() {
-  const router = useRouter();
-  const handleBack = () => {
-    router.back();
-  };
-  
   return (
     <DashboardLayout pageTitle="Pilih Tema">
       <BackNavigation />

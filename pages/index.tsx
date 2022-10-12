@@ -33,24 +33,22 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
+    document.addEventListener(
+      "message",
+      function (event) {
+        console.log("Received post message", event);
+      },
+      false
+    );
+  }, []);
+
+  useEffect(() => {
     if (getCookie("data") === "") {
       router.push("/first");
     } else {
       router.push("/");
     }
   }, [data]);
-
-  useEffect(() => {
-    if (dataCookie) {
-      window?.ReactNativeWebView?.postMessage(JSON.stringify(dataCookie));
-    }
-  }, [dataCookie]);
-
-  useEffect(() => {
-    window.addEventListener("message", (message) => {
-      console.log(message);
-    });
-  }, []);
 
   useEffect(() => {
     if (getCookie("data") !== "") {
@@ -60,21 +58,6 @@ export default function Home() {
       }
     }
   }, []);
-
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-    setCookie("data", JSON.stringify(data), 14);
-    router.reload();
-    if (getCookie("data") !== "") {
-      setInput(false);
-    }
-  };
-
-  const handleChange = (e: any) => {
-    const newData = { ...data };
-    newData[e.target.name] = e.target.value;
-    setData(newData);
-  };
 
   return (
     <>

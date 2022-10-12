@@ -1,16 +1,7 @@
-import {
-  ProSidebar,
-  SidebarHeader,
-  SidebarContent,
-  Menu,
-  MenuItem,
-  SubMenu,
-} from "react-pro-sidebar";
+import { ProSidebar, SidebarContent, Menu, MenuItem } from "react-pro-sidebar";
 import styles from "./Sidebar.module.scss";
-import { ReactNode, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import logoCompany from "./../../../../public/assets/png/logoCompany.png";
-import Image from "next/image";
 import { getCookie } from "../../common/utils";
 
 interface SidebarProps {
@@ -31,7 +22,9 @@ export default function Sidebar(props: SidebarProps) {
     }
   }, []);
 
-  useEffect(() => {}, [data]);
+  const shareLink = (e: any) => {
+    e.preventDefault();
+  };
 
   return (
     <aside className={styles.sidebar}>
@@ -63,7 +56,7 @@ export default function Sidebar(props: SidebarProps) {
                 <a></a>
               </Link>
             </MenuItem>
-            <MenuItem>
+            <MenuItem onClick={shareLink}>
               Bagikan Aplikasi
               <Link href="#">
                 <a></a>

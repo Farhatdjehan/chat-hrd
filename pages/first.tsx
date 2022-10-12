@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { getCookie, setCookie } from "../src/components/common/utils";
@@ -10,7 +12,7 @@ export default function First() {
   const handleSubmit = (e: any) => {
     e.preventDefault();
     setCookie("data", JSON.stringify(data), 14);
-    router.push('/');
+    router.push("/");
     // if (getCookie("data") !== "") {
     //   setInput(false);
     // }

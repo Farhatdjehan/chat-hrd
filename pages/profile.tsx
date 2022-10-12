@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import DashboardLayout from "../src/components/DashboardLayout";
 import { useState, useEffect } from "react";
 import { getCookie, setCookie } from "../src/components/common/utils";
@@ -21,10 +23,6 @@ export default function Profile() {
     setEdit(setDefaultData());
   }, [data]);
 
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
-
   const setDefaultData = () => {
     const newData = { ...edit };
     const existingData = data;
@@ -46,8 +44,6 @@ export default function Profile() {
     tmp.nama = edit?.nama;
     tmp.umur = edit?.umur;
     tmp.telepon = edit?.telepon;
-    // setData(tmp);
-    console.log(tmp, edit);
     setCookie("data", JSON.stringify(tmp), 14);
     router.reload();
   };

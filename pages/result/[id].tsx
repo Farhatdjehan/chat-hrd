@@ -101,7 +101,6 @@ export default function Result() {
   useEffect(() => {
     if (popup) {
       setCookie("data", JSON.stringify(combine), 14);
-      console.log(combine);
       if (combine?.message) {
         window?.ReactNativeWebView?.postMessage(JSON.stringify(combine));
       }

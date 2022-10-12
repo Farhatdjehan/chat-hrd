@@ -1,5 +1,5 @@
+// @ts-nocheck
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
@@ -37,13 +37,16 @@ export default function Save() {
     deleteCookie("data");
     router.reload();
   };
+
   const handleCopy = () => {
     setCopied(true);
   };
+
   const handleExpand = (id: any) => {
     setExpand(!expand);
     setIdExpanded(id);
   };
+  
   return (
     <DashboardLayout pageTitle="Saved Template">
       <div className="saved-wrapper">

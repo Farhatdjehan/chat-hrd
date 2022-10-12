@@ -1,9 +1,30 @@
+// @ts-nocheck
+
 import "../styles/globals.scss";
 import type { AppProps } from "next/app";
 import Script from "next/script";
 import { GA_MEASUREMENT_ID } from "../src/components/constants";
+import { useEffect, useState } from "react";
+import { getCookie } from "../src/components/common/utils";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const [dataCookie, setDataCookie] = useState();
+
+  useEffect(() => {
+    if (getCookie("data") !== "") {
+      let tmp = getCookie("data");
+      if (tmp !== undefined) {
+        setDataCookie(JSON.parse(tmp));
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    if (dataCookie) {
+      window?.ReactNativeWebView?.postMessage(JSON.stringify(dataCookie));
+    }
+  }, [dataCookie]);
+
   return (
     <>
       <Component {...pageProps} />
