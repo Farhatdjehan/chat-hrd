@@ -71,7 +71,7 @@ export default function Sidebar(props: SidebarProps) {
     } else if (socmed === "Twitter") {
       share = `http://twitter.com/share?text=Jangan+akhlaqless+yuk%2C+&url=${url}&hashtags=nostalgia,kamus,bahasagaul90an,kamnos`;
     } else {
-      share = `https://api.whatsapp.com/send?phone=+6282311888360&text=Aku%20mau%20kasih%20masukkan%20dong!`;
+      share = `https://wa.me/?text=Jangan+akhlaqless+yuk%2C+${url}`;
     }
     window.open(share, "_blank")?.focus();
   };
@@ -102,7 +102,7 @@ export default function Sidebar(props: SidebarProps) {
             </MenuItem>
             <MenuItem>
               Beri Masukkan
-              <Link href="https://form.asana.com/?k=bAQOG6X_k7d0HA6cZjOfLA&d=1200494741159113">
+              <Link href="https://api.whatsapp.com/send?phone=+6282311888360&text=Aku%20mau%20kasih%20masukkan%20dong!">
                 <a></a>
               </Link>
             </MenuItem>
