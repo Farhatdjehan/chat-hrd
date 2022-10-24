@@ -27,5 +27,19 @@ $breakpoint-lg: 992px;
       margin: auto;
       // border: 1px solid black;
     }
+    .iconFooter {
+      width: 100%;
+      text-align: center;
+      a {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 8px;
+        span {
+          margin-left: 8px;
+          font-size: 12px;
+          font-weight: 600;
+        }
+      }
+    }
   }
 }

@@ -3,8 +3,10 @@ import { ReactNode, useEffect, useState } from "react";
 import Link from "next/link";
 import Sidebar from "./Sidebar";
 import Header from "./Header";
+import playstoreDownload from "./../../../public/footer-hrd.png";
 import FooterMobile from "./FooterMobile";
 import Helmet from "../common/Helmet";
+import Image from "next/image";
 interface DashboardLayoutProps {
   children: ReactNode;
   pageTitle: string;
@@ -27,6 +29,14 @@ export default function DashboardLayout(props: DashboardLayoutProps) {
       <main className={styles.contentWrapper}>
         <Header handleToggle={handleToggle} />
         <section className={styles.dashboardContent}>{children}</section>
+        <div className={styles.iconFooter}>
+          <Link href="https://play.google.com/store/apps/details?id=com.koneksi.akhlaqchat" passHref>
+            <a>
+              <Image width={80} height={24} src={playstoreDownload} />
+              <span>Download Sekarang Juga!</span>
+            </a>
+          </Link>
+        </div>
         {/* <FooterMobile /> */}
       </main>
     </div>

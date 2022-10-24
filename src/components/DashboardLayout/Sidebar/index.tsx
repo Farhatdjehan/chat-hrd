@@ -118,6 +118,12 @@ export default function Sidebar(props: SidebarProps) {
                 <a></a>
               </Link>
             </MenuItem>
+            <MenuItem>
+              Kebijakan Privasi
+              <Link href="https://github.com/Farhatdjehan/Privacy-Policy-Akhlaq-Chat">
+                <a></a>
+              </Link>
+            </MenuItem>
           </Menu>
         </SidebarContent>
       </ProSidebar>
