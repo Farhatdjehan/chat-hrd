@@ -127,12 +127,12 @@ export default function Sidebar(props: SidebarProps) {
                 <a></a>
               </Link>
             </MenuItem>
-            <MenuItem onClick={(e) => redirectOpen(e, 2)}>
+            {/* <MenuItem onClick={(e) => redirectOpen(e, 2)}>
               Nilai Aplikasi
               <Link href="#">
                 <a></a>
               </Link>
-            </MenuItem>
+            </MenuItem> */}
             <MenuItem onClick={(e) => redirectOpen(e, 3)}>
               Kebijakan Privasi
               <Link href="#">
