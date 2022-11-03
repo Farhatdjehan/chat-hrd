@@ -46,7 +46,7 @@ export default function Save() {
     setExpand(!expand);
     setIdExpanded(id);
   };
-  
+
   return (
     <DashboardLayout pageTitle="Saved Template">
       <div className="saved-wrapper">
@@ -77,7 +77,10 @@ export default function Save() {
                       </div>
                     </div>
                     {idExpanded === idx && expand && (
-                      <div dangerouslySetInnerHTML={{ __html: item }} />
+                      <div
+                        id="show"
+                        dangerouslySetInnerHTML={{ __html: item }}
+                      />
                     )}
                   </div>
                 );

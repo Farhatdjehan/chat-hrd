@@ -76,11 +76,48 @@ export default function Form() {
         {formDynamic("divisi", "ex: Kreatif", "Divisi Melamar")}
         {formDynamic("tanggal", "ex: 1 Januari 2012", "Tanggal Melamar")}
       </>
-    ) : (
+    ) : id === 4 ? (
       <>
         {formDynamic("nama_hrd", "ex: Bapak/Ibu John Doe", "Nama HRD")}
         {formDynamic("perusahaan", "ex: PT. ABC", "Nama Perusahaan")}
         {formDynamic("divisi", "ex: Kreatif", "Divisi Melamar")}
+      </>
+    ) : id === 5 ? (
+      <>
+        {formDynamic("ttl", "ex: Jakarta, 12 Juni 2022", "Tempat dan Tanggal")}
+        {formDynamic("perusahaan", "ex: PT. ABC", "Nama Perusahaan")}
+        {formDynamic("nama_hrd", "ex: Bapak/Ibu John Doe", "Nama HRD")}
+        {formDynamic("nik", "ex: xxxxxxxxxx", "Nomor Induk Karyawan")}
+        {formDynamic(
+          "address",
+          "ex: Jl. Raya Musi No. 90",
+          "Alamat Tempat Tinggal"
+        )}
+        {formDynamic("jabatan", "ex: Manager", "Jabatan")}
+        {formDynamic("divisi_bekerja", "ex: Kreatif", "Divisi Bekerja")}
+        {formDynamic("end_date", "ex: 23 Januari 2023", "Terakhir Bekerja")}
+        {formDynamic("experience_work", "ex: 3 tahun", "Lama Bekerja")}
+      </>
+    ) : id === 6 ? (
+      <>
+        {formDynamic("ttl", "ex: Jakarta, 12 Juni 2022", "Tempat dan Tanggal")}
+        {formDynamic("jenis_cuti", "ex: Acara Keluarga Besar", "Jenis Cuti")}
+        {formDynamic("perusahaan", "ex: PT. ABC", "Nama Perusahaan")}
+        {formDynamic("nama_hrd", "ex: Bapak/Ibu John Doe", "Nama HRD")}
+        {formDynamic("nik", "ex: xxxxxxxxxx", "Nomor Induk Karyawan")}
+        {formDynamic("jabatan", "ex: Manager", "Jabatan")}
+        {formDynamic("divisi_bekerja", "ex: Kreatif", "Divisi Bekerja")}
+        {formDynamic("lama_cuti", "ex: 1 Minggu", "Lama Cuti")}
+        {formDynamic("start_cuti", "ex: 23 Januari 2023", "Mulai Cuti")}
+        {formDynamic("end_cuti", "ex: 3 tahun", "Akhir Cuti")}
+      </>
+    ) : (
+      <>
+        {formDynamic("nama_hrd", "ex: Bapak/Ibu John Doe", "Nama HRD")}
+        {formDynamic("tanggal", "ex: 12 Juni 2022", "Tanggal Izin")}
+        {formDynamic("jabatan", "ex: Manager", "Jabatan")}
+        {formDynamic("reason", "ex: Sakit", "Alasan Tidak Masuk")}
+        {formDynamic("refrence_friend", "ex: Alfred", "Delegasi Tugas")}
       </>
     );
   };

@@ -34,4 +34,16 @@ export const templateChat = [
     id: 4,
     title: "Evaluasi Hasil Interview",
   },
+  {
+    id: 5,
+    title: "Mengundurkan Diri",
+  },
+  {
+    id: 6,
+    title: "Pengajuan Cuti",
+  },
+  {
+    id: 7,
+    title: "Izin Berhalangan Masuk",
+  },
 ];

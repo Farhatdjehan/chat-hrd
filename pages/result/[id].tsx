@@ -75,6 +75,82 @@ export default function Result() {
       ${combine?.nama}
       No. Wa: ${combine?.telepon}`,
     },
+    {
+      id: 5,
+      title: "Mengundurkan Diri",
+      text: `${combine?.ttl}
+      Kepada Yth,
+      HRD ${combine?.perusahaan}, ${combine?.nama_hrd}
+      
+      Dengan hormat,
+      
+      Yang bertanda tangan di bawah ini:
+      
+      NIK     : ${combine?.NIK}
+      Nama    : ${combine?.nama}
+      Alamat  : ${combine?.address}
+      Jabatan : ${combine?.jabatan}
+      
+      Melalui surat ini, saya mengajukan permohonan untuk mengundurkan diri dari jabatan ${combine?.divisi_bekerja} di perusahaan ${combine?.perusahaan} terhitung pada tanggal ${combine?.end_date}.
+      
+      Saya memutuskan untuk tidak lagi menjadi bagian dari perusahaan ${combine?.perusahaan}. Tidak lupa saya ucapkan mohon maaf atas segala kesalahan yang mungkin sempat saya lakukan dan meninggalkan kesan buruk di hati Bapak/Ibu selama bekerja di ${combine?.perusahaan}.
+      
+      Dengan rasa syukur saya ucapkan berterima kasih kepada Bapak/Ibu karena sudah memberikan saya kesempatan untuk bekerja, belajar, dan berkembang di perusahaan ${combine?.perusahaan} selama ${combine?.experience_work}. Selain itu, saya juga ingin mengucapkan terima kasih kepada rekan kerja yang telah banyak kerjasama untuk mencapai target perusahaan.
+      
+      Demikian surat ini saya buat tanpa paksaan dari orang lain, semoga dapat diterima oleh Bapak/Ibu.
+      
+      Hormat saya,
+      
+       
+      
+      (${combine?.nama})`,
+    },
+    {
+      id: 6,
+      title: "Pengajuan Cuti",
+      text: `${combine?.ttl}
+      Perihal : Permohonan cuti ${combine?.jenis_cuti}
+      
+      Kepada Yth,
+      Kepala HRD ${combine?.perusahaan}, ${combine?.nama_hrd}
+      Di tempat
+      
+      Dengan hormat,
+      Yang bertanda tangan di bawah ini:
+      NIK     : ${combine?.NIK}
+      Nama    : ${combine?.nama}
+      Divisi  : ${combine?.divisi_bekerja}
+      Jabatan : ${combine?.jabatan}
+
+      
+      Bermaksud mengajukan cuti tahunan selama ${combine?.lama_cuti} hari, terhitung mulai tanggal ${combine?.start_cuti}
+      sampai dengan tanggal ${combine?.end_cuti}.
+      
+      Demikian surat permohonan cuti ini saya ajukan. Atas perhatian Bapak/Ibu, saya ucapkan terima kasih.
+      
+      Hormat saya,
+      
+
+
+      ${combine?.nama}`,
+    },
+    {
+      id: 7,
+      title: "Izin Berhalangan Masuk",
+      text: `Kepada Ibu/Bapak ${combine?.nama_hrd},
+      
+      Selamat pagi. Semoga Bapak/Ibu dalam keadaan sehat selalu. Saya ingin menyampaikan informasi bahwa hari ini:
+
+      Tanggal : ${combine?.tanggal}
+      
+      Nama    : ${combine?.nama}
+      
+      Jabatan : ${combine?.jabatan}
+      
+      Sedang tidak bisa masuk ke kantor di karenakan ${combine?.reason}. Saya berharap Bapak/Ibu bisa memakluminya. Selama izin kerja ini, saya sudah menghubungi rekan kerja saya atas nama ${combine?.refrence_friend} untuk menyelesaikan tugas kantor saya sementara waktu. 
+      
+      Demikian informasi ini, saya ucapkan terima kasih.`,
+    },
   ];
 
   useEffect(() => {
@@ -93,10 +169,6 @@ export default function Result() {
       setCombine(tmpGetData);
     }
   }, []);
-
-  useEffect(() => {
-    console.log(combine);
-  }, [combine]);
 
   useEffect(() => {
     if (popup) {
