@@ -10,6 +10,8 @@ import sun from "./../public/assets/png/sun.png";
 import moon from "./../public/assets/png/moon.png";
 import chat from "./../public/assets/png/chat.png";
 import Router, { useRouter } from "next/router";
+import MenuHome from "../src/components/MenuHome";
+import { listMenu } from "../src/components/constants/listMenu";
 
 export default function Home() {
   const router = useRouter();
@@ -81,22 +83,18 @@ export default function Home() {
         </div>
         <div className={styles.greetingMsgMain}>Hi, {dataCookie?.nama}</div>
         <div className="card-list__wrapper">
-          <Link href="/tema/input">
-            <a className="card-template">
-              <div className="card-illustration">
-                <Image src={chat} width={24} height={24} />
-              </div>
-              <div className="card-wrapper__text">
-                <div className="card-text">Chat HRD</div>
-                <div className="card-subtext">Lebih sopan dengan HRD</div>
-              </div>
-            </a>
-          </Link>
-          <Link href="#">
-            <a className="card-template">
-              <div className="card-text">Segera...</div>
-            </a>
-          </Link>
+          {listMenu.map((item, index) => {
+            return (
+              <MenuHome
+                key={index}
+                id={item.id}
+                type={item.type}
+                illustration={item.illustration}
+                title={item.title}
+                subtitle={item.subtitle}
+              />
+            );
+          })}
         </div>
       </DashboardLayout>
       {/* )} */}
