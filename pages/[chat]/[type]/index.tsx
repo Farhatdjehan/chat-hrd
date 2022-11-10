@@ -39,6 +39,8 @@ export default function Form() {
     setData(newData);
   };
 
+
+  console.log(data);
   return (
     <DashboardLayout pageTitle="Input">
       <BackNavigation />

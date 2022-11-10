@@ -10,7 +10,6 @@ import { textTemplate } from "../../src/components/constants/textTemplate";
 
 export default function Result() {
   const router = useRouter();
-  const [data, setData]: any = useState();
   const [number, setNumber]: any = useState();
   const [copied, setCopied]: any = useState();
   const [messages, setMessages]: any = useState([]);
@@ -24,11 +23,7 @@ export default function Result() {
   useEffect(() => {
     let template = textTemplate(combine);
     setSelectedMessages(template[idTemplate]?.input[idMsg]);
-  }, [router]);
-
-  useEffect(() => {
-    console.log(selectedMessages);
-  }, [selectedMessages]);
+  }, [router, combine]);
 
   useEffect(() => {
     if (router?.query?.id !== undefined) {
@@ -55,10 +50,6 @@ export default function Result() {
       }
     }
   }, [popup, combine]);
-
-  useEffect(() => {
-    // setSelectedMessages(templateChat.filter((e) => e.id === number));
-  }, [number]);
 
   useEffect(() => {
     if (messages?.length > 0) {
@@ -117,7 +108,7 @@ export default function Result() {
         <div style={{ marginBottom: "16px" }} className="btn-wrapper">
           {selectedMessages && (
             <CopyToClipboard
-              text={selectedMessages[0]?.text.replace(/<[^>]+>/g, "")}
+              // text={selectedMessages?.text.replace(/<[^>]+>/g, "")}
               onCopy={handleCopy}
             >
               <button className="btn main-screen__button">Salin</button>

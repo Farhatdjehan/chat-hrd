@@ -58,19 +58,11 @@ export const templateChat = [
     template: [
       {
         id: 1,
-        title: "Ajakan Main",
+        title: "Ajakan Keluar",
       },
       {
         id: 2,
-        title: "Nanya Keseharian",
-      },
-      {
-        id: 3,
         title: "Truth or Dare",
-      },
-      {
-        id: 5,
-        title: "Ucapan Romantis",
       },
     ],
   },
@@ -80,14 +72,10 @@ export const templateChat = [
     template: [
       {
         id: 1,
-        title: "Ajakan Kenalan",
+        title: "Ajak Kenalan",
       },
       {
         id: 2,
-        title: "Diskusi Ringan",
-      },
-      {
-        id: 3,
         title: "Ajakan Hangout",
       },
     ],
@@ -98,14 +86,10 @@ export const templateChat = [
     template: [
       {
         id: 1,
-        title: "Ajakan Kenalan",
+        title: "Ajak Kenalan",
       },
       {
         id: 2,
-        title: "Diskusi Ringan",
-      },
-      {
-        id: 3,
         title: "Ajakan Hangout",
       },
     ],

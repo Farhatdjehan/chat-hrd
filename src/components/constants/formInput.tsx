@@ -208,7 +208,7 @@ export const formInput = [
           {
             name: "tanggal",
             placeholder: "ex: 1 Januari 2012",
-            label: "Tanggal Melamar",
+            label: "Tanggal Tidak Masuk",
           },
           {
             name: "jabatan",
@@ -236,9 +236,9 @@ export const formInput = [
         id: 1,
         input: [
           {
-            name: "name_friend",
-            placeholder: "ex: Alfred",
-            label: "Nama Pacar",
+            name: "lovely_call",
+            placeholder: "ex: Sayang",
+            label: "Panggilan Sayang",
           },
           {
             name: "where",
@@ -247,7 +247,7 @@ export const formInput = [
           },
           {
             name: "hari",
-            placeholder: "ex: Hari Selasa",
+            placeholder: "ex: Selasa",
             label: "Hari Apa?",
           },
           {
@@ -261,194 +261,14 @@ export const formInput = [
         id: 2,
         input: [
           {
-            name: "question_day",
-            placeholder: "ex: Pagi",
-            label: "Hari",
+            name: "topic",
+            placeholder: "ex: Mantan Kamu",
+            label: "Tentang Apa?",
           },
           {
-            name: "divisi",
-            placeholder: "ex: Social Media Spesialis",
-            label: "Divisi Melamar",
-          },
-          {
-            name: "source",
-            placeholder: "ex: Instagram",
-            label: "Sumber Lowongan",
-          },
-        ],
-      },
-      {
-        id: 3,
-        input: [
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
-          },
-          {
-            name: "divisi",
-            placeholder: "ex: Social Media Spesialis",
-            label: "Divisi Melamar",
-          },
-          {
-            name: "tanggal",
-            placeholder: "ex: 1 Januari 2012",
-            label: "Tanggal Melamar",
-          },
-        ],
-      },
-      {
-        id: 4,
-        input: [
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
-          },
-          {
-            name: "divisi",
-            placeholder: "ex: Social Media Spesialis",
-            label: "Divisi Melamar",
-          },
-        ],
-      },
-      {
-        id: 5,
-        input: [
-          {
-            name: "ttl",
-            placeholder: "ex: Jakarta, 12 Juni 2022",
-            label: "Tempat dan Tanggal",
-          },
-          {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
-          },
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "nik",
-            placeholder: "ex: xxxxxxxxxx",
-            label: "Nomor Induk Karyawan",
-          },
-          {
-            name: "address",
-            placeholder: "ex: Jl. Raya Musi No. 90",
-            label: "Alamat Tempat Tinggal",
-          },
-          {
-            name: "jabatan",
-            placeholder: "ex: Manager",
-            label: "Jabatan",
-          },
-          {
-            name: "divisi_bekerja",
-            placeholder: "ex: Kreatif",
-            label: "Divisi Bekerja",
-          },
-          {
-            name: "end_date",
-            placeholder: "ex: 23 Januari 2023",
-            label: "Terakhir Bekerja",
-          },
-          {
-            name: "experience_work",
-            placeholder: "ex: 3 tahun",
-            label: "Lama Bekerja",
-          },
-        ],
-      },
-      {
-        id: 6,
-        input: [
-          {
-            name: "ttl",
-            placeholder: "ex: Jakarta, 12 Juni 2022",
-            label: "Tempat dan Tanggal",
-          },
-          {
-            name: "jenis_cuti",
-            placeholder: "ex: Acara Keluarga Besar",
-            label: "Jenis Cuti",
-          },
-          {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
-          },
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "nik",
-            placeholder: "ex: xxxxxxxxxx",
-            label: "Nomor Induk Karyawan",
-          },
-          {
-            name: "jabatan",
-            placeholder: "ex: Manager",
-            label: "Jabatan",
-          },
-          {
-            name: "divisi_bekerja",
-            placeholder: "ex: Kreatif",
-            label: "Divisi Bekerja",
-          },
-          {
-            name: "lama_cuti",
-            placeholder: "ex: 1 Minggu",
-            label: "Lama Cuti",
-          },
-          {
-            name: "end_cuti",
-            placeholder: "ex: 12 Juni 2022",
-            label: "Akhir Cuti",
-          },
-        ],
-      },
-      {
-        id: 7,
-        input: [
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "tanggal",
-            placeholder: "ex: 1 Januari 2012",
-            label: "Tanggal Melamar",
-          },
-          {
-            name: "jabatan",
-            placeholder: "ex: Manager",
-            label: "Jabatan",
-          },
-          {
-            name: "reason",
-            placeholder: "ex: Sakit",
-            label: "Alasan Tidak Masuk",
-          },
-          {
-            name: "refrence_friend",
-            placeholder: "ex: Alfred",
-            label: "Delegasi Tugas",
+            name: "pertanyaan_tod",
+            placeholder: "ex: Udah Pernah Kemana Aja?",
+            label: "Pertanyaan",
           },
         ],
       },
@@ -461,29 +281,14 @@ export const formInput = [
         id: 1,
         input: [
           {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
+            name: "greeting_kenalan",
+            placeholder: "ex: Halo atau Hai",
+            label: "Kalimat Pembuka",
           },
           {
-            name: "divisi",
-            placeholder: "ex: Social Media Spesialis",
-            label: "Divisi Melamar",
-          },
-          {
-            name: "former_company",
-            placeholder: "ex: PT. ABC",
-            label: "Perusahaan Sebelumnya",
-          },
-          {
-            name: "experience",
-            placeholder: "ex: 1 Tahun",
-            label: "Pengalaman Bekerja",
-          },
-          {
-            name: "source",
-            placeholder: "ex: Instagram",
-            label: "Sumber Lowongan",
+            name: "nama",
+            placeholder: "ex: Alfred",
+            label: "Nama Kamu",
           },
         ],
       },
@@ -491,424 +296,14 @@ export const formInput = [
         id: 2,
         input: [
           {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
+            name: "location",
+            placeholder: "ex: Nonton bioskop",
+            label: "Mau Kemana?",
           },
           {
-            name: "divisi",
-            placeholder: "ex: Social Media Spesialis",
-            label: "Divisi Melamar",
-          },
-          {
-            name: "source",
-            placeholder: "ex: Instagram",
-            label: "Sumber Lowongan",
-          },
-        ],
-      },
-      {
-        id: 3,
-        input: [
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
-          },
-          {
-            name: "divisi",
-            placeholder: "ex: Social Media Spesialis",
-            label: "Divisi Melamar",
-          },
-          {
-            name: "tanggal",
-            placeholder: "ex: 1 Januari 2012",
-            label: "Tanggal Melamar",
-          },
-        ],
-      },
-      {
-        id: 4,
-        input: [
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
-          },
-          {
-            name: "divisi",
-            placeholder: "ex: Social Media Spesialis",
-            label: "Divisi Melamar",
-          },
-        ],
-      },
-      {
-        id: 5,
-        input: [
-          {
-            name: "ttl",
-            placeholder: "ex: Jakarta, 12 Juni 2022",
-            label: "Tempat dan Tanggal",
-          },
-          {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
-          },
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "nik",
-            placeholder: "ex: xxxxxxxxxx",
-            label: "Nomor Induk Karyawan",
-          },
-          {
-            name: "address",
-            placeholder: "ex: Jl. Raya Musi No. 90",
-            label: "Alamat Tempat Tinggal",
-          },
-          {
-            name: "jabatan",
-            placeholder: "ex: Manager",
-            label: "Jabatan",
-          },
-          {
-            name: "divisi_bekerja",
-            placeholder: "ex: Kreatif",
-            label: "Divisi Bekerja",
-          },
-          {
-            name: "end_date",
-            placeholder: "ex: 23 Januari 2023",
-            label: "Terakhir Bekerja",
-          },
-          {
-            name: "experience_work",
-            placeholder: "ex: 3 tahun",
-            label: "Lama Bekerja",
-          },
-        ],
-      },
-      {
-        id: 6,
-        input: [
-          {
-            name: "ttl",
-            placeholder: "ex: Jakarta, 12 Juni 2022",
-            label: "Tempat dan Tanggal",
-          },
-          {
-            name: "jenis_cuti",
-            placeholder: "ex: Acara Keluarga Besar",
-            label: "Jenis Cuti",
-          },
-          {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
-          },
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "nik",
-            placeholder: "ex: xxxxxxxxxx",
-            label: "Nomor Induk Karyawan",
-          },
-          {
-            name: "jabatan",
-            placeholder: "ex: Manager",
-            label: "Jabatan",
-          },
-          {
-            name: "divisi_bekerja",
-            placeholder: "ex: Kreatif",
-            label: "Divisi Bekerja",
-          },
-          {
-            name: "lama_cuti",
-            placeholder: "ex: 1 Minggu",
-            label: "Lama Cuti",
-          },
-          {
-            name: "end_cuti",
-            placeholder: "ex: 12 Juni 2022",
-            label: "Akhir Cuti",
-          },
-        ],
-      },
-      {
-        id: 7,
-        input: [
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "tanggal",
-            placeholder: "ex: 1 Januari 2012",
-            label: "Tanggal Melamar",
-          },
-          {
-            name: "jabatan",
-            placeholder: "ex: Manager",
-            label: "Jabatan",
-          },
-          {
-            name: "reason",
-            placeholder: "ex: Sakit",
-            label: "Alasan Tidak Masuk",
-          },
-          {
-            name: "refrence_friend",
-            placeholder: "ex: Alfred",
-            label: "Delegasi Tugas",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 3,
-    form: [
-      {
-        id: 1,
-        input: [
-          {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
-          },
-          {
-            name: "divisi",
-            placeholder: "ex: Social Media Spesialis",
-            label: "Divisi Melamar",
-          },
-          {
-            name: "former_company",
-            placeholder: "ex: PT. ABC",
-            label: "Perusahaan Sebelumnya",
-          },
-          {
-            name: "experience",
-            placeholder: "ex: 1 Tahun",
-            label: "Pengalaman Bekerja",
-          },
-          {
-            name: "source",
-            placeholder: "ex: Instagram",
-            label: "Sumber Lowongan",
-          },
-        ],
-      },
-      {
-        id: 2,
-        input: [
-          {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
-          },
-          {
-            name: "divisi",
-            placeholder: "ex: Social Media Spesialis",
-            label: "Divisi Melamar",
-          },
-          {
-            name: "source",
-            placeholder: "ex: Instagram",
-            label: "Sumber Lowongan",
-          },
-        ],
-      },
-      {
-        id: 3,
-        input: [
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
-          },
-          {
-            name: "divisi",
-            placeholder: "ex: Social Media Spesialis",
-            label: "Divisi Melamar",
-          },
-          {
-            name: "tanggal",
-            placeholder: "ex: 1 Januari 2012",
-            label: "Tanggal Melamar",
-          },
-        ],
-      },
-      {
-        id: 4,
-        input: [
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
-          },
-          {
-            name: "divisi",
-            placeholder: "ex: Social Media Spesialis",
-            label: "Divisi Melamar",
-          },
-        ],
-      },
-      {
-        id: 5,
-        input: [
-          {
-            name: "ttl",
-            placeholder: "ex: Jakarta, 12 Juni 2022",
-            label: "Tempat dan Tanggal",
-          },
-          {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
-          },
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "nik",
-            placeholder: "ex: xxxxxxxxxx",
-            label: "Nomor Induk Karyawan",
-          },
-          {
-            name: "address",
-            placeholder: "ex: Jl. Raya Musi No. 90",
-            label: "Alamat Tempat Tinggal",
-          },
-          {
-            name: "jabatan",
-            placeholder: "ex: Manager",
-            label: "Jabatan",
-          },
-          {
-            name: "divisi_bekerja",
-            placeholder: "ex: Kreatif",
-            label: "Divisi Bekerja",
-          },
-          {
-            name: "end_date",
-            placeholder: "ex: 23 Januari 2023",
-            label: "Terakhir Bekerja",
-          },
-          {
-            name: "experience_work",
-            placeholder: "ex: 3 tahun",
-            label: "Lama Bekerja",
-          },
-        ],
-      },
-      {
-        id: 6,
-        input: [
-          {
-            name: "ttl",
-            placeholder: "ex: Jakarta, 12 Juni 2022",
-            label: "Tempat dan Tanggal",
-          },
-          {
-            name: "jenis_cuti",
-            placeholder: "ex: Acara Keluarga Besar",
-            label: "Jenis Cuti",
-          },
-          {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
-          },
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "nik",
-            placeholder: "ex: xxxxxxxxxx",
-            label: "Nomor Induk Karyawan",
-          },
-          {
-            name: "jabatan",
-            placeholder: "ex: Manager",
-            label: "Jabatan",
-          },
-          {
-            name: "divisi_bekerja",
-            placeholder: "ex: Kreatif",
-            label: "Divisi Bekerja",
-          },
-          {
-            name: "lama_cuti",
-            placeholder: "ex: 1 Minggu",
-            label: "Lama Cuti",
-          },
-          {
-            name: "end_cuti",
-            placeholder: "ex: 12 Juni 2022",
-            label: "Akhir Cuti",
-          },
-        ],
-      },
-      {
-        id: 7,
-        input: [
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "tanggal",
-            placeholder: "ex: 1 Januari 2012",
-            label: "Tanggal Melamar",
-          },
-          {
-            name: "jabatan",
-            placeholder: "ex: Manager",
-            label: "Jabatan",
-          },
-          {
-            name: "reason",
-            placeholder: "ex: Sakit",
-            label: "Alasan Tidak Masuk",
-          },
-          {
-            name: "refrence_friend",
-            placeholder: "ex: Alfred",
-            label: "Delegasi Tugas",
+            name: "hari_apa",
+            placeholder: "ex: Hari selasa",
+            label: "Mau Hari Apa?",
           },
         ],
       },
@@ -921,29 +316,14 @@ export const formInput = [
         id: 1,
         input: [
           {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
+            name: "greeting",
+            placeholder: "ex: Halo atau Hai",
+            label: "Kalimat Pembuka",
           },
           {
-            name: "divisi",
-            placeholder: "ex: Social Media Spesialis",
-            label: "Divisi Melamar",
-          },
-          {
-            name: "former_company",
-            placeholder: "ex: PT. ABC",
-            label: "Perusahaan Sebelumnya",
-          },
-          {
-            name: "experience",
-            placeholder: "ex: 1 Tahun",
-            label: "Pengalaman Bekerja",
-          },
-          {
-            name: "source",
-            placeholder: "ex: Instagram",
-            label: "Sumber Lowongan",
+            name: "nama",
+            placeholder: "ex: Vina",
+            label: "Nama Kamu",
           },
         ],
       },
@@ -951,194 +331,14 @@ export const formInput = [
         id: 2,
         input: [
           {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
+            name: "location",
+            placeholder: "ex: Nonton bioskop",
+            label: "Mau Kemana?",
           },
           {
-            name: "divisi",
-            placeholder: "ex: Social Media Spesialis",
-            label: "Divisi Melamar",
-          },
-          {
-            name: "source",
-            placeholder: "ex: Instagram",
-            label: "Sumber Lowongan",
-          },
-        ],
-      },
-      {
-        id: 3,
-        input: [
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
-          },
-          {
-            name: "divisi",
-            placeholder: "ex: Social Media Spesialis",
-            label: "Divisi Melamar",
-          },
-          {
-            name: "tanggal",
-            placeholder: "ex: 1 Januari 2012",
-            label: "Tanggal Melamar",
-          },
-        ],
-      },
-      {
-        id: 4,
-        input: [
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
-          },
-          {
-            name: "divisi",
-            placeholder: "ex: Social Media Spesialis",
-            label: "Divisi Melamar",
-          },
-        ],
-      },
-      {
-        id: 5,
-        input: [
-          {
-            name: "ttl",
-            placeholder: "ex: Jakarta, 12 Juni 2022",
-            label: "Tempat dan Tanggal",
-          },
-          {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
-          },
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "nik",
-            placeholder: "ex: xxxxxxxxxx",
-            label: "Nomor Induk Karyawan",
-          },
-          {
-            name: "address",
-            placeholder: "ex: Jl. Raya Musi No. 90",
-            label: "Alamat Tempat Tinggal",
-          },
-          {
-            name: "jabatan",
-            placeholder: "ex: Manager",
-            label: "Jabatan",
-          },
-          {
-            name: "divisi_bekerja",
-            placeholder: "ex: Kreatif",
-            label: "Divisi Bekerja",
-          },
-          {
-            name: "end_date",
-            placeholder: "ex: 23 Januari 2023",
-            label: "Terakhir Bekerja",
-          },
-          {
-            name: "experience_work",
-            placeholder: "ex: 3 tahun",
-            label: "Lama Bekerja",
-          },
-        ],
-      },
-      {
-        id: 6,
-        input: [
-          {
-            name: "ttl",
-            placeholder: "ex: Jakarta, 12 Juni 2022",
-            label: "Tempat dan Tanggal",
-          },
-          {
-            name: "jenis_cuti",
-            placeholder: "ex: Acara Keluarga Besar",
-            label: "Jenis Cuti",
-          },
-          {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
-          },
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "nik",
-            placeholder: "ex: xxxxxxxxxx",
-            label: "Nomor Induk Karyawan",
-          },
-          {
-            name: "jabatan",
-            placeholder: "ex: Manager",
-            label: "Jabatan",
-          },
-          {
-            name: "divisi_bekerja",
-            placeholder: "ex: Kreatif",
-            label: "Divisi Bekerja",
-          },
-          {
-            name: "lama_cuti",
-            placeholder: "ex: 1 Minggu",
-            label: "Lama Cuti",
-          },
-          {
-            name: "end_cuti",
-            placeholder: "ex: 12 Juni 2022",
-            label: "Akhir Cuti",
-          },
-        ],
-      },
-      {
-        id: 7,
-        input: [
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "tanggal",
-            placeholder: "ex: 1 Januari 2012",
-            label: "Tanggal Melamar",
-          },
-          {
-            name: "jabatan",
-            placeholder: "ex: Manager",
-            label: "Jabatan",
-          },
-          {
-            name: "reason",
-            placeholder: "ex: Sakit",
-            label: "Alasan Tidak Masuk",
-          },
-          {
-            name: "refrence_friend",
-            placeholder: "ex: Alfred",
-            label: "Delegasi Tugas",
+            name: "hari_apa",
+            placeholder: "ex: Hari selasa",
+            label: "Mau Hari Apa?",
           },
         ],
       },
@@ -1151,29 +351,24 @@ export const formInput = [
         id: 1,
         input: [
           {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
+            name: "gender",
+            placeholder: "ex: Ibu",
+            label: "Kirim ke Ibu atau Ayahnya?",
           },
           {
-            name: "divisi",
-            placeholder: "ex: Social Media Spesialis",
-            label: "Divisi Melamar",
+            name: "location_date",
+            placeholder: "ex: Pantai Ancol",
+            label: "Mau Kemana?",
           },
           {
-            name: "former_company",
-            placeholder: "ex: PT. ABC",
-            label: "Perusahaan Sebelumnya",
+            name: "girlfriend",
+            placeholder: "ex: Vina",
+            label: "Nama Pacar Kamu",
           },
           {
-            name: "experience",
-            placeholder: "ex: 1 Tahun",
-            label: "Pengalaman Bekerja",
-          },
-          {
-            name: "source",
-            placeholder: "ex: Instagram",
-            label: "Sumber Lowongan",
+            name: "hari",
+            placeholder: "ex: Hari Selasa",
+            label: "Hari Apa?",
           },
         ],
       },
@@ -1181,19 +376,14 @@ export const formInput = [
         id: 2,
         input: [
           {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
+            name: "greeting_mertua",
+            placeholder: "ex: Assalamualaikum",
+            label: "Kalimat Pembuka",
           },
           {
-            name: "divisi",
-            placeholder: "ex: Social Media Spesialis",
-            label: "Divisi Melamar",
-          },
-          {
-            name: "source",
-            placeholder: "ex: Instagram",
-            label: "Sumber Lowongan",
+            name: "gender",
+            placeholder: "ex: Ibu",
+            label: "Kirim ke Ibu atau Ayahnya?",
           },
         ],
       },
@@ -1201,174 +391,19 @@ export const formInput = [
         id: 3,
         input: [
           {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
+            name: "gender",
+            placeholder: "ex: Ibu",
+            label: "Kirim ke Ibu atau Ayahnya?",
           },
           {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
+            name: "ucapin_apa",
+            placeholder: "ex: Ulang Tahun",
+            label: "Mau Ucapin Apa?",
           },
           {
-            name: "divisi",
-            placeholder: "ex: Social Media Spesialis",
-            label: "Divisi Melamar",
-          },
-          {
-            name: "tanggal",
-            placeholder: "ex: 1 Januari 2012",
-            label: "Tanggal Melamar",
-          },
-        ],
-      },
-      {
-        id: 4,
-        input: [
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
-          },
-          {
-            name: "divisi",
-            placeholder: "ex: Social Media Spesialis",
-            label: "Divisi Melamar",
-          },
-        ],
-      },
-      {
-        id: 5,
-        input: [
-          {
-            name: "ttl",
-            placeholder: "ex: Jakarta, 12 Juni 2022",
-            label: "Tempat dan Tanggal",
-          },
-          {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
-          },
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "nik",
-            placeholder: "ex: xxxxxxxxxx",
-            label: "Nomor Induk Karyawan",
-          },
-          {
-            name: "address",
-            placeholder: "ex: Jl. Raya Musi No. 90",
-            label: "Alamat Tempat Tinggal",
-          },
-          {
-            name: "jabatan",
-            placeholder: "ex: Manager",
-            label: "Jabatan",
-          },
-          {
-            name: "divisi_bekerja",
-            placeholder: "ex: Kreatif",
-            label: "Divisi Bekerja",
-          },
-          {
-            name: "end_date",
-            placeholder: "ex: 23 Januari 2023",
-            label: "Terakhir Bekerja",
-          },
-          {
-            name: "experience_work",
-            placeholder: "ex: 3 tahun",
-            label: "Lama Bekerja",
-          },
-        ],
-      },
-      {
-        id: 6,
-        input: [
-          {
-            name: "ttl",
-            placeholder: "ex: Jakarta, 12 Juni 2022",
-            label: "Tempat dan Tanggal",
-          },
-          {
-            name: "jenis_cuti",
-            placeholder: "ex: Acara Keluarga Besar",
-            label: "Jenis Cuti",
-          },
-          {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
-          },
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "nik",
-            placeholder: "ex: xxxxxxxxxx",
-            label: "Nomor Induk Karyawan",
-          },
-          {
-            name: "jabatan",
-            placeholder: "ex: Manager",
-            label: "Jabatan",
-          },
-          {
-            name: "divisi_bekerja",
-            placeholder: "ex: Kreatif",
-            label: "Divisi Bekerja",
-          },
-          {
-            name: "lama_cuti",
-            placeholder: "ex: 1 Minggu",
-            label: "Lama Cuti",
-          },
-          {
-            name: "end_cuti",
-            placeholder: "ex: 12 Juni 2022",
-            label: "Akhir Cuti",
-          },
-        ],
-      },
-      {
-        id: 7,
-        input: [
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "tanggal",
-            placeholder: "ex: 1 Januari 2012",
-            label: "Tanggal Melamar",
-          },
-          {
-            name: "jabatan",
-            placeholder: "ex: Manager",
-            label: "Jabatan",
-          },
-          {
-            name: "reason",
-            placeholder: "ex: Sakit",
-            label: "Alasan Tidak Masuk",
-          },
-          {
-            name: "refrence_friend",
-            placeholder: "ex: Alfred",
-            label: "Delegasi Tugas",
+            name: "doa",
+            placeholder: "ex: Sehat selalu, berkah, dll.",
+            label: "Harapan Kamu Apa?",
           },
         ],
       },
@@ -1381,214 +416,14 @@ export const formInput = [
         id: 1,
         input: [
           {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
-          },
-          {
-            name: "divisi",
-            placeholder: "ex: Social Media Spesialis",
-            label: "Divisi Melamar",
-          },
-          {
-            name: "former_company",
-            placeholder: "ex: PT. ABC",
-            label: "Perusahaan Sebelumnya",
-          },
-          {
-            name: "experience",
-            placeholder: "ex: 1 Tahun",
-            label: "Pengalaman Bekerja",
-          },
-          {
-            name: "source",
-            placeholder: "ex: Instagram",
-            label: "Sumber Lowongan",
-          },
-        ],
-      },
-      {
-        id: 2,
-        input: [
-          {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
-          },
-          {
-            name: "divisi",
-            placeholder: "ex: Social Media Spesialis",
-            label: "Divisi Melamar",
-          },
-          {
-            name: "source",
-            placeholder: "ex: Instagram",
-            label: "Sumber Lowongan",
-          },
-        ],
-      },
-      {
-        id: 3,
-        input: [
-          {
-            name: "nama_hrd",
+            name: "nama_atasan",
             placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
+            label: "Nama Atasan",
           },
           {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
-          },
-          {
-            name: "divisi",
-            placeholder: "ex: Social Media Spesialis",
-            label: "Divisi Melamar",
-          },
-          {
-            name: "tanggal",
+            name: "tanggal_izin",
             placeholder: "ex: 1 Januari 2012",
-            label: "Tanggal Melamar",
-          },
-        ],
-      },
-      {
-        id: 4,
-        input: [
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
-          },
-          {
-            name: "divisi",
-            placeholder: "ex: Social Media Spesialis",
-            label: "Divisi Melamar",
-          },
-        ],
-      },
-      {
-        id: 5,
-        input: [
-          {
-            name: "ttl",
-            placeholder: "ex: Jakarta, 12 Juni 2022",
-            label: "Tempat dan Tanggal",
-          },
-          {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
-          },
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "nik",
-            placeholder: "ex: xxxxxxxxxx",
-            label: "Nomor Induk Karyawan",
-          },
-          {
-            name: "address",
-            placeholder: "ex: Jl. Raya Musi No. 90",
-            label: "Alamat Tempat Tinggal",
-          },
-          {
-            name: "jabatan",
-            placeholder: "ex: Manager",
-            label: "Jabatan",
-          },
-          {
-            name: "divisi_bekerja",
-            placeholder: "ex: Kreatif",
-            label: "Divisi Bekerja",
-          },
-          {
-            name: "end_date",
-            placeholder: "ex: 23 Januari 2023",
-            label: "Terakhir Bekerja",
-          },
-          {
-            name: "experience_work",
-            placeholder: "ex: 3 tahun",
-            label: "Lama Bekerja",
-          },
-        ],
-      },
-      {
-        id: 6,
-        input: [
-          {
-            name: "ttl",
-            placeholder: "ex: Jakarta, 12 Juni 2022",
-            label: "Tempat dan Tanggal",
-          },
-          {
-            name: "jenis_cuti",
-            placeholder: "ex: Acara Keluarga Besar",
-            label: "Jenis Cuti",
-          },
-          {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
-          },
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "nik",
-            placeholder: "ex: xxxxxxxxxx",
-            label: "Nomor Induk Karyawan",
-          },
-          {
-            name: "jabatan",
-            placeholder: "ex: Manager",
-            label: "Jabatan",
-          },
-          {
-            name: "divisi_bekerja",
-            placeholder: "ex: Kreatif",
-            label: "Divisi Bekerja",
-          },
-          {
-            name: "lama_cuti",
-            placeholder: "ex: 1 Minggu",
-            label: "Lama Cuti",
-          },
-          {
-            name: "end_cuti",
-            placeholder: "ex: 12 Juni 2022",
-            label: "Akhir Cuti",
-          },
-        ],
-      },
-      {
-        id: 7,
-        input: [
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "tanggal",
-            placeholder: "ex: 1 Januari 2012",
-            label: "Tanggal Melamar",
-          },
-          {
-            name: "jabatan",
-            placeholder: "ex: Manager",
-            label: "Jabatan",
+            label: "Tanggal Tidak Masuk",
           },
           {
             name: "reason",
@@ -1599,6 +434,21 @@ export const formInput = [
             name: "refrence_friend",
             placeholder: "ex: Alfred",
             label: "Delegasi Tugas",
+          },
+        ],
+      },
+      {
+        id: 2,
+        input: [
+          {
+            name: "topik",
+            placeholder: "ex: Apresiasi yang diberikan",
+            label: "Tentang Apa?",
+          },
+          {
+            name: "nama_atasan",
+            placeholder: "ex: Bapak/Ibu John Doe",
+            label: "Nama Atasan",
           },
         ],
       },
@@ -1611,29 +461,19 @@ export const formInput = [
         id: 1,
         input: [
           {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
+            name: "nama_guru",
+            placeholder: "ex: Bapak/Ibu John Doe",
+            label: "Nama Guru",
           },
           {
-            name: "divisi",
-            placeholder: "ex: Social Media Spesialis",
-            label: "Divisi Melamar",
+            name: "tanggal_guru",
+            placeholder: "ex: 1 Januari 2012",
+            label: "Tanggal Tidak Masuk",
           },
           {
-            name: "former_company",
-            placeholder: "ex: PT. ABC",
-            label: "Perusahaan Sebelumnya",
-          },
-          {
-            name: "experience",
-            placeholder: "ex: 1 Tahun",
-            label: "Pengalaman Bekerja",
-          },
-          {
-            name: "source",
-            placeholder: "ex: Instagram",
-            label: "Sumber Lowongan",
+            name: "reason",
+            placeholder: "ex: Sakit",
+            label: "Alasan Tidak Masuk",
           },
         ],
       },
@@ -1641,19 +481,14 @@ export const formInput = [
         id: 2,
         input: [
           {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
+            name: "topik",
+            placeholder: "ex: Apresiasi yang diberikan",
+            label: "Tentang Apa?",
           },
           {
-            name: "divisi",
-            placeholder: "ex: Social Media Spesialis",
-            label: "Divisi Melamar",
-          },
-          {
-            name: "source",
-            placeholder: "ex: Instagram",
-            label: "Sumber Lowongan",
+            name: "nama_guru",
+            placeholder: "ex: Bapak/Ibu John Doe",
+            label: "Nama Guru",
           },
         ],
       },
@@ -1661,174 +496,14 @@ export const formInput = [
         id: 3,
         input: [
           {
-            name: "nama_hrd",
+            name: "topik",
+            placeholder: "ex: Kapan Jadwal Bagi Rapot",
+            label: "Tentang Apa?",
+          },
+          {
+            name: "nama_guru",
             placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
-          },
-          {
-            name: "divisi",
-            placeholder: "ex: Social Media Spesialis",
-            label: "Divisi Melamar",
-          },
-          {
-            name: "tanggal",
-            placeholder: "ex: 1 Januari 2012",
-            label: "Tanggal Melamar",
-          },
-        ],
-      },
-      {
-        id: 4,
-        input: [
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
-          },
-          {
-            name: "divisi",
-            placeholder: "ex: Social Media Spesialis",
-            label: "Divisi Melamar",
-          },
-        ],
-      },
-      {
-        id: 5,
-        input: [
-          {
-            name: "ttl",
-            placeholder: "ex: Jakarta, 12 Juni 2022",
-            label: "Tempat dan Tanggal",
-          },
-          {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
-          },
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "nik",
-            placeholder: "ex: xxxxxxxxxx",
-            label: "Nomor Induk Karyawan",
-          },
-          {
-            name: "address",
-            placeholder: "ex: Jl. Raya Musi No. 90",
-            label: "Alamat Tempat Tinggal",
-          },
-          {
-            name: "jabatan",
-            placeholder: "ex: Manager",
-            label: "Jabatan",
-          },
-          {
-            name: "divisi_bekerja",
-            placeholder: "ex: Kreatif",
-            label: "Divisi Bekerja",
-          },
-          {
-            name: "end_date",
-            placeholder: "ex: 23 Januari 2023",
-            label: "Terakhir Bekerja",
-          },
-          {
-            name: "experience_work",
-            placeholder: "ex: 3 tahun",
-            label: "Lama Bekerja",
-          },
-        ],
-      },
-      {
-        id: 6,
-        input: [
-          {
-            name: "ttl",
-            placeholder: "ex: Jakarta, 12 Juni 2022",
-            label: "Tempat dan Tanggal",
-          },
-          {
-            name: "jenis_cuti",
-            placeholder: "ex: Acara Keluarga Besar",
-            label: "Jenis Cuti",
-          },
-          {
-            name: "perusahaan",
-            placeholder: "ex: PT. ABC",
-            label: "Nama Perusahaan",
-          },
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "nik",
-            placeholder: "ex: xxxxxxxxxx",
-            label: "Nomor Induk Karyawan",
-          },
-          {
-            name: "jabatan",
-            placeholder: "ex: Manager",
-            label: "Jabatan",
-          },
-          {
-            name: "divisi_bekerja",
-            placeholder: "ex: Kreatif",
-            label: "Divisi Bekerja",
-          },
-          {
-            name: "lama_cuti",
-            placeholder: "ex: 1 Minggu",
-            label: "Lama Cuti",
-          },
-          {
-            name: "end_cuti",
-            placeholder: "ex: 12 Juni 2022",
-            label: "Akhir Cuti",
-          },
-        ],
-      },
-      {
-        id: 7,
-        input: [
-          {
-            name: "nama_hrd",
-            placeholder: "ex: Bapak/Ibu John Doe",
-            label: "Nama HRD",
-          },
-          {
-            name: "tanggal",
-            placeholder: "ex: 1 Januari 2012",
-            label: "Tanggal Melamar",
-          },
-          {
-            name: "jabatan",
-            placeholder: "ex: Manager",
-            label: "Jabatan",
-          },
-          {
-            name: "reason",
-            placeholder: "ex: Sakit",
-            label: "Alasan Tidak Masuk",
-          },
-          {
-            name: "refrence_friend",
-            placeholder: "ex: Alfred",
-            label: "Delegasi Tugas",
+            label: "Nama Guru",
           },
         ],
       },
