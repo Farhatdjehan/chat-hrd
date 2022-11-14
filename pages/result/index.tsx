@@ -73,6 +73,14 @@ export default function Result() {
     setPopup(true);
   };
 
+  console.log(
+    <div
+      dangerouslySetInnerHTML={{
+        __html: selectedMessages?.text,
+      }}
+    />
+  );
+
   const handleSave = () => {
     setTextPopup("Berhasil Menyimpan");
     setPopup(true);
@@ -107,10 +115,7 @@ export default function Result() {
         </div>
         <div style={{ marginBottom: "16px" }} className="btn-wrapper">
           {selectedMessages && (
-            <CopyToClipboard
-              // text={selectedMessages?.text.replace(/<[^>]+>/g, "")}
-              onCopy={handleCopy}
-            >
+            <CopyToClipboard text={selectedMessages?.text} onCopy={handleCopy}>
               <button className="btn main-screen__button">Salin</button>
             </CopyToClipboard>
           )}

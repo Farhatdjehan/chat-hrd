@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
 import BackNavigation from "../src/components/backNavigation";
-import { deleteCookie, getCookie } from "../src/components/common/utils";
+import { deleteCookie, getCookie, setCookie } from "../src/components/common/utils";
 import DashboardLayout from "../src/components/DashboardLayout";
 import copy from "./../public/assets/png/copy.png";
 import arrowDown from "./../public/assets/png/arrowDown.png";
@@ -34,7 +34,9 @@ export default function Save() {
   }, [copied]);
 
   const handleDelete = () => {
-    deleteCookie("data");
+    let emptyMessage = listSaved;
+    emptyMessage.message = [];
+    setCookie("data", JSON.stringify(emptyMessage), 14);
     router.reload();
   };
 
