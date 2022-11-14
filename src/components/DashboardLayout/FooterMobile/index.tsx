@@ -1,22 +1,43 @@
-// import s from "./FooterMobile.module.scss";
-import playstoreDownload from "./../../../../public/footer-hrd.png";
-import styles from "./../../DashboardLayout/DashboardLayout.module.scss";
-import GlobeBlueSvg from "./../../../../public/assets/svg/globe-blue.svg";
-import Image from "next/image";
-import Link from "next/link";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
+import Banner from "../../Banner";
 
 export default function FooterMobile() {
+  const handleRedirect = (id: any) => {
+    let share;
+    if (id === 1) {
+      share =
+        "https://play.google.com/store/apps/details?id=com.influencer.konekita";
+    } else {
+      share =
+        "https://play.google.com/store/apps/details?id=com.koneksi.konekios";
+    }
+    window.open(share, "_blank")?.focus();
+  };
   return (
-    <div className={styles.iconFooter}>
-      <Link
-        href="https://play.google.com/store/apps/details?id=com.koneksi.akhlaqchat"
-        passHref
+    <>
+      <Carousel
+        infiniteLoop={true}
+        autoPlay={true}
+        showArrows={false}
+        showStatus={false}
+        showIndicators={false}
+        showThumbs={false}
+        interval={2000}
       >
-        <a>
-          <Image width={80} height={24} src={playstoreDownload} />
-          <span>Download Sekarang Juga!</span>
-        </a>
-      </Link>
-    </div>
+        <Banner
+          text="Ingin Bekarya atau Menikmati Karya?"
+          product="Konekita"
+          color="#6151A2"
+          handleRedirect={() => handleRedirect(1)}
+        />
+        <Banner
+          text="Buat Website Gratis Kurang Dari 1 Menit?"
+          product="Konekios"
+          color="#8D95FE"
+          handleRedirect={() => handleRedirect(2)}
+        />
+      </Carousel>
+    </>
   );
 }
