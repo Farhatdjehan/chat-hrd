@@ -7,14 +7,15 @@ interface menuHome {
   title?: string;
   subtitle?: string;
   type?: string;
+  color?: string;
 }
 
 export default function MenuHome(props: menuHome) {
-  const { title, subtitle, illustration, id, type } = props;
+  const { title, subtitle, illustration, id, type, color } = props;
 
   return (
     <Link href={`/chat-${type}?id=${id}`}>
-      <a className="card-template">
+      <a style={{ backgroundColor: `${color}` }} className="card-template">
         <div className="card-illustration">
           <Image
             src={illustration}

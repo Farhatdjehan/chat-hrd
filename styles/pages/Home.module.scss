@@ -4,10 +4,44 @@
   color: rgba(0, 0, 0, 0.595);
   margin-bottom: 4px;
   display: flex;
+  line-height: 15px;
 }
 .greetingMsgMain {
   font-size: 24px;
   font-weight: 700;
-  margin-bottom: 24px;
+  margin-bottom: 14px;
+  line-height: 32px;
+  // margin-bottom: 42px;
   text-transform: capitalize;
+}
+.input {
+  width: 100%;
+  margin-bottom: 42px;
+  form {
+    position: relative;
+    input {
+      width: 100%;
+      border: none;
+      background: rgba(215, 215, 215, 0.25);
+      border-radius: 8px;
+      height: 50px;
+      padding: 12px 90px 12px 16px;
+    }
+    button {
+      color: #444444;
+      position: absolute;
+      right: 10px;
+      top: 7px;
+      background: #b9b2de;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    span {
+      position: absolute;
+      top: 12px;
+      right: 90px;
+    }
+  }
 }

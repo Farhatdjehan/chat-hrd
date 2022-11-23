@@ -13,6 +13,7 @@ export const listMenu = [
     type: "hrd",
     illustration: hrd,
     subtitle: "Lebih sopan dengan HRD",
+    color: '#FFDDA7',
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ export const listMenu = [
     type: "pacar",
     illustration: pacar,
     subtitle: "Peka sama pacarnya yuk",
+    color: '#B9B2DE',
   },
   {
     id: 3,
@@ -27,6 +29,7 @@ export const listMenu = [
     type: "cewek-stranger",
     illustration: cewekStrange,
     subtitle: "Kenalan yuk sama cewek",
+    color: '#F9BAA8',
   },
   {
     id: 4,
@@ -34,6 +37,7 @@ export const listMenu = [
     type: "cowok-stranger",
     illustration: cowokStrange,
     subtitle: "Kenalan yuk sama cowok",
+    color: '#BBE4D9',
   },
   {
     id: 5,
@@ -41,6 +45,7 @@ export const listMenu = [
     type: "calon-mertua",
     illustration: mertua,
     subtitle: "Sama camer jangan kaku ya",
+    color: '#FFC8DB',
   },
   {
     id: 6,
@@ -48,6 +53,7 @@ export const listMenu = [
     type: "atasan",
     illustration: atasan,
     subtitle: "Jangan songong sama atasan!",
+    color: '#FFDDA7',
   },
   {
     id: 7,
@@ -55,5 +61,6 @@ export const listMenu = [
     type: "guru",
     illustration: guru,
     subtitle: "Chat gurumu dengan sopan",
+    color: '#B9B2DE',
   },
 ];

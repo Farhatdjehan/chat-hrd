@@ -15,8 +15,9 @@ import { listMenu } from "../src/components/constants/listMenu";
 
 export default function Home() {
   const router = useRouter();
-  const [input, setInput]: any = useState(false);
+  const [result, setResult]: any = useState(false);
   const [data, setData]: any = useState();
+  const [filteredData, setFilteredData]: any = useState();
   const [dataCookie, setDataCookie]: any = useState();
   const [time, setTime]: any = useState();
 
@@ -50,7 +51,7 @@ export default function Home() {
     } else {
       router.push("/");
     }
-  }, [data]);
+  }, []);
 
   useEffect(() => {
     if (getCookie("data") !== "") {
@@ -60,6 +61,35 @@ export default function Home() {
       }
     }
   }, []);
+
+  useEffect(() => {
+    console.log(filteredData);
+  }, [filteredData]);
+
+  const handleSearch = (e: any) => {
+    const newData = { ...data };
+    newData[e.target.id] = e.target.value;
+    setData(newData);
+  };
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    let filters = listMenu.filter((valueFilter) =>
+      valueFilter.title
+        .toLowerCase()
+        .includes(data?.template_search?.toLowerCase())
+    );
+    setFilteredData(filters);
+    setResult(true);
+  };
+
+  const handleReset = (e: any) => {
+    e.preventDefault();
+    let id = document.getElementById("template_search");
+    setResult(false);
+    id.value = "";
+    setFilteredData();
+  };
 
   return (
     <>
@@ -79,28 +109,54 @@ export default function Home() {
               <Image src={moon} width={16} height={16} />
             )}
           </span>
-          Selamat {time}!
+          {time} {dataCookie?.nama}!
         </div>
-        <div className={styles.greetingMsgMain}>Hi, {dataCookie?.nama}</div>
+        {/* <div className={styles.greetingMsgMain}>Hi, </div> */}
+        <div className={styles.greetingMsgMain}>Cari Template Apa?</div>
+        <div className={styles.input}>
+          <form onSubmit={handleSubmit}>
+            <input
+              placeholder="Template Chat Apa?"
+              name="template_search"
+              id="template_search"
+              onChange={handleSearch}
+            />
+            {result && <span onClick={handleReset}>×</span>}
+            <button type="submit">Cari</button>
+          </form>
+        </div>
         <div className="card-list__wrapper">
-          {listMenu.map((item, index) => {
-            return (
-              <MenuHome
-                key={index}
-                id={item.id}
-                type={item.type}
-                illustration={item.illustration}
-                title={item.title}
-                subtitle={item.subtitle}
-              />
-            );
-          })}
+          {result &&
+            filteredData.map((item, index) => {
+              return (
+                <MenuHome
+                  key={index}
+                  color={item.color}
+                  id={item.id}
+                  type={item.type}
+                  illustration={item.illustration}
+                  title={item.title}
+                  subtitle={item.subtitle}
+                />
+              );
+            })}
+
+          {!result &&
+            listMenu.map((item, index) => {
+              return (
+                <MenuHome
+                  key={index}
+                  color={item.color}
+                  id={item.id}
+                  type={item.type}
+                  illustration={item.illustration}
+                  title={item.title}
+                  subtitle={item.subtitle}
+                />
+              );
+            })}
         </div>
       </DashboardLayout>
-      {/* )} */}
-      {/* {input && (
-        <FormInput handleSubmit={handleSubmit} handleChange={handleChange} />
-      )} */}
     </>
   );
 }
